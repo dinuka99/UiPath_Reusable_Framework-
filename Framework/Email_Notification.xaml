@@ -1,0 +1,208 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Email_Notification" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System.ComponentModel.TypeConverter" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ug="clr-namespace:UiPath.GSuite;assembly=UiPath.GSuite" xmlns:uga="clr-namespace:UiPath.GSuite.Activities;assembly=UiPath.GSuite.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_boolFlowFailed" Type="InArgument(x:Boolean)" />
+    <x:Property Name="in_strErrorMessage" Type="InArgument(x:String)" />
+    <x:Property Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1114.4,800.8</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Email_Notification_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.GSuite.Activities.Enums</x:String>
+      <x:String>UiPath.GSuite</x:String>
+      <x:String>UiPath.GSuite.Contracts</x:String>
+      <x:String>UiPath.GSuite.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>UiPath.GSuite.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.GSuite</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>System.CodeDom</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Email_Notification" sap:VirtualizedContainerService.HintSize="675.2,736" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:IfElseIf sap2010:Annotation.AnnotationText="Send a Email when the process successfully completed" DisplayName="Else If" sap:VirtualizedContainerService.HintSize="612.8,624" sap2010:WorkflowViewState.IdRef="IfElseIf_1">
+      <ui:IfElseIf.ConditionBlocks>
+        <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
+          <ui:IfElseIfBlock BlockType="If" Condition="[Not in_boolFlowFailed]">
+            <ui:IfElseIfBlock.Then>
+              <Sequence DisplayName="Success Email Send" sap:VirtualizedContainerService.HintSize="449.6,164.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <uga:GSuiteApplicationScope Account="{x:Null}" ApiKey="{x:Null}" ContinueOnError="{x:Null}" Folder="{x:Null}" KeyPath="{x:Null}" SecureCredentialSecret="{x:Null}" ServiceAccountEmail="{x:Null}" TimeoutMS="{x:Null}" UserEmail="{x:Null}" AuthenticationType="OAuthClientID" CredentialID="101823691738-qgigcs3u74oa1s0l7tl5qi58v1bin8d3.apps.googleusercontent.com" CredentialSecret="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" DataStoreLocation="Local disk" DisplayName="NoReply GSuite Application Scope" HasDomainWideAccesss="False" sap:VirtualizedContainerService.HintSize="387.2,52.8" sap2010:WorkflowViewState.IdRef="GSuiteApplicationScope_1" KeyType="JSON" OAuthClient="" Password="notasecret" Services="Unselected">
+                  <uga:GSuiteApplicationScope.AuthenticationScopes>
+                    <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+                  </uga:GSuiteApplicationScope.AuthenticationScopes>
+                  <uga:GSuiteApplicationScope.Body>
+                    <ActivityAction x:TypeArguments="ug:SimpleObjectContainer">
+                      <ActivityAction.Argument>
+                        <DelegateInArgument x:TypeArguments="ug:SimpleObjectContainer" Name="GSuiteScope" />
+                      </ActivityAction.Argument>
+                      <Sequence DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="449.6,452.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <uga:SendEmail AttachmentList="{x:Null}" Bcc="{x:Null}" ContinueOnError="{x:Null}" AuthScopesInvalid="False" Body="[&quot;&lt;!DOCTYPE html&gt;&#xA;&lt;html&gt;&#xA;&lt;body&gt;&#xA;&#xA;&#xA;&lt;p&gt;Dear All,&lt;/p&gt;&#xA;&#xA;&lt;p&gt;The  process has been successfully completed. The output file is now available at the following location.&lt;br&gt;&lt;br&gt;Location : &quot;&quot;&lt;/p&gt;&lt;br&gt;&#xA;&#xA;&lt;p &gt;&lt;i style=&quot;&quot;color:DodgerBlue&quot;&quot;&gt;Best Regards&lt;/i&gt;&lt;br&gt;&#xA;&lt;font size=&quot;&quot;3&quot;&quot; color=&quot;&quot;#03989e&quot;&quot;&gt;&lt;b&gt;Innobot Health &lt;/b&gt;&#xA;&lt;/font&gt;&lt;br&gt;&#xA;&lt;font size=&quot;&quot;2&quot;&quot; color=&quot;&quot;#03989e&quot;&quot;&gt;&lt;b&gt;ROBOTIC PROCESS AUTOMATION DEPARTMENT&lt;/b&gt;&lt;/font&gt;&lt;br&gt;&#xA;&#xA;&#xA;&lt;span style=&quot;&quot;font-size:12px&quot;&quot;&gt;1507 NW 34th Ave | Cape Coral, FL 33993.&lt;br&gt;&#xA;Office: (888) 341-1009  &lt;br&gt;&#xA;Website: www.innobothealth.com&lt;/span&gt;&lt;br&gt;&lt;/p&gt;&#xA;&lt;img src=&quot;&quot;https://innobothealth.com/img/upload/innobot_practice_logo.png&quot;&quot; width=&quot;&quot;250&quot;&quot; height=&quot;&quot;80&quot;&quot;&gt;&#xA;&lt;p style=&quot;&quot;font-size:12px&quot;&quot;&gt;&lt;b&gt;This Is a RPA system generated email. Please Do Not respond To this email.&lt;/b&gt;&lt;/p&gt;&#xA;&#xA;&lt;font size=&quot;&quot;1&quot;&quot; color=&quot;&quot;#808080&quot;&quot;&gt;&lt;b&gt;Confidentiality Notice: This electronic message is intended to be for the use only of the named recipient, and may contain information that is confidential or privileged. If you are not the intended recipient, you are hereby notified that any disclosure, copying, distribution or use of the contents of this message is strictly prohibited. If you have received this message in error or are not the named recipient, please notify us immediately by contacting the sender at the electronic mail address noted above, and delete and destroy all copies of this message. Thank you.&lt;/b&gt;&#xA;&lt;/font&gt;&lt;br&gt;&#xA;&#xA;&lt;/body&gt;&#xA;&lt;/html&gt;&quot;]" Cc="[{&quot;&quot;}]" DisplayName="No Reply Send Mail Message" sap:VirtualizedContainerService.HintSize="387.2,340.8" sap2010:WorkflowViewState.IdRef="SendEmail_1" IsDraft="False" IsHTML="True" Subject="[&quot; Process Completed - &quot;+Now.ToString(&quot;MM/dd/yyyy&quot;)]" To="[{&quot;&quot;}]">
+                          <uga:SendEmail.Attachments>
+                            <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+                          </uga:SendEmail.Attachments>
+                        </uga:SendEmail>
+                      </Sequence>
+                    </ActivityAction>
+                  </uga:GSuiteApplicationScope.Body>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </uga:GSuiteApplicationScope>
+              </Sequence>
+            </ui:IfElseIfBlock.Then>
+          </ui:IfElseIfBlock>
+          <ui:IfElseIfBlock BlockType="Else">
+            <ui:IfElseIfBlock.Then>
+              <Sequence sap2010:Annotation.AnnotationText="Send a Email when any error orcured " DisplayName="Failed or Error Email Send" sap:VirtualizedContainerService.HintSize="449.6,196" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <uga:GSuiteApplicationScope Account="{x:Null}" ApiKey="{x:Null}" ContinueOnError="{x:Null}" Folder="{x:Null}" KeyPath="{x:Null}" SecureCredentialSecret="{x:Null}" ServiceAccountEmail="{x:Null}" TimeoutMS="{x:Null}" UserEmail="{x:Null}" AuthenticationType="OAuthClientID" CredentialID="101823691738-qgigcs3u74oa1s0l7tl5qi58v1bin8d3.apps.googleusercontent.com" CredentialSecret="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" DataStoreLocation="Local disk" DisplayName="NoReply GSuite Application Scope" HasDomainWideAccesss="False" sap:VirtualizedContainerService.HintSize="387.2,52.8" sap2010:WorkflowViewState.IdRef="GSuiteApplicationScope_2" KeyType="JSON" OAuthClient="" Password="notasecret" Services="Unselected">
+                  <uga:GSuiteApplicationScope.AuthenticationScopes>
+                    <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+                  </uga:GSuiteApplicationScope.AuthenticationScopes>
+                  <uga:GSuiteApplicationScope.Body>
+                    <ActivityAction x:TypeArguments="ug:SimpleObjectContainer">
+                      <ActivityAction.Argument>
+                        <DelegateInArgument x:TypeArguments="ug:SimpleObjectContainer" Name="GSuiteScope" />
+                      </ActivityAction.Argument>
+                      <Sequence DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="449.6,452.8" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <uga:SendEmail AttachmentList="{x:Null}" Bcc="{x:Null}" ContinueOnError="{x:Null}" AuthScopesInvalid="False" Body="[&quot;&lt;!DOCTYPE html&gt;&#xD;&#xA;&lt;html&gt;&#xD;&#xA;&lt;body&gt;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&lt;p&gt;Dear All,&lt;/p&gt;&#xD;&#xA;&#xD;&#xA;&lt;p&gt;The  process has been Failed.&lt;br&gt;&lt;br&gt;Location : &quot;&quot;&lt;/p&gt;&lt;br&gt;&#xD;&#xA;&#xD;&#xA;&lt;p &gt;&lt;i style=&quot;&quot;color:DodgerBlue&quot;&quot;&gt;Best Regards&lt;/i&gt;&lt;br&gt;&#xD;&#xA;&lt;font size=&quot;&quot;3&quot;&quot; color=&quot;&quot;#03989e&quot;&quot;&gt;&lt;b&gt;Innobot Health &lt;/b&gt;&#xD;&#xA;&lt;/font&gt;&lt;br&gt;&#xD;&#xA;&lt;font size=&quot;&quot;2&quot;&quot; color=&quot;&quot;#03989e&quot;&quot;&gt;&lt;b&gt;ROBOTIC PROCESS AUTOMATION DEPARTMENT&lt;/b&gt;&lt;/font&gt;&lt;br&gt;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&lt;span style=&quot;&quot;font-size:12px&quot;&quot;&gt;1507 NW 34th Ave | Cape Coral, FL 33993.&lt;br&gt;&#xD;&#xA;Office: (888) 341-1009  &lt;br&gt;&#xD;&#xA;Website: www.innobothealth.com&lt;/span&gt;&lt;br&gt;&lt;/p&gt;&#xD;&#xA;&lt;img src=&quot;&quot;https://innobothealth.com/img/upload/innobot_practice_logo.png&quot;&quot; width=&quot;&quot;250&quot;&quot; height=&quot;&quot;80&quot;&quot;&gt;&#xD;&#xA;&lt;p style=&quot;&quot;font-size:12px&quot;&quot;&gt;&lt;b&gt;This Is a RPA system generated email. Please Do Not respond To this email.&lt;/b&gt;&lt;/p&gt;&#xD;&#xA;&#xD;&#xA;&lt;font size=&quot;&quot;1&quot;&quot; color=&quot;&quot;#808080&quot;&quot;&gt;&lt;b&gt;Confidentiality Notice: This electronic message is intended to be for the use only of the named recipient, and may contain information that is confidential or privileged. If you are not the intended recipient, you are hereby notified that any disclosure, copying, distribution or use of the contents of this message is strictly prohibited. If you have received this message in error or are not the named recipient, please notify us immediately by contacting the sender at the electronic mail address noted above, and delete and destroy all copies of this message. Thank you.&lt;/b&gt;&#xD;&#xA;&lt;/font&gt;&lt;br&gt;&#xD;&#xA;&#xD;&#xA;&lt;/body&gt;&#xD;&#xA;&lt;/html&gt;&quot;]" Cc="[{&quot;&quot;}]" DisplayName="No Reply Send Mail Message" sap:VirtualizedContainerService.HintSize="387.2,340.8" sap2010:WorkflowViewState.IdRef="SendEmail_2" IsDraft="False" IsHTML="True" Subject="[&quot; Process Failed - &quot;+Now.ToString(&quot;MM/dd/yyyy&quot;)]" To="[{&quot;&quot;}]">
+                          <uga:SendEmail.Attachments>
+                            <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+                          </uga:SendEmail.Attachments>
+                        </uga:SendEmail>
+                      </Sequence>
+                    </ActivityAction>
+                  </uga:GSuiteApplicationScope.Body>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </uga:GSuiteApplicationScope>
+              </Sequence>
+            </ui:IfElseIfBlock.Then>
+          </ui:IfElseIfBlock>
+        </sc:BindingList>
+      </ui:IfElseIf.ConditionBlocks>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:IfElseIf>
+  </Sequence>
+</Activity>
