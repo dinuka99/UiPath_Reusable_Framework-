@@ -7,7 +7,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1114.4,800.8</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1114.4,931.2</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Email_Notification_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -102,13 +102,13 @@
       <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Email_Notification" sap:VirtualizedContainerService.HintSize="675.2,736" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Email_Notification" sap:VirtualizedContainerService.HintSize="658.4,866.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:IfElseIf sap2010:Annotation.AnnotationText="Send a Email when the process successfully completed" DisplayName="Else If" sap:VirtualizedContainerService.HintSize="612.8,624" sap2010:WorkflowViewState.IdRef="IfElseIf_1">
+    <ui:IfElseIf sap2010:Annotation.AnnotationText="Send a Email when the process successfully completed" DisplayName="Else If" sap:VirtualizedContainerService.HintSize="596,624" sap2010:WorkflowViewState.IdRef="IfElseIf_1">
       <ui:IfElseIf.ConditionBlocks>
         <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
           <ui:IfElseIfBlock BlockType="If" Condition="[Not in_boolFlowFailed]">
@@ -178,7 +178,7 @@
                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <uga:SendEmail AttachmentList="{x:Null}" Bcc="{x:Null}" ContinueOnError="{x:Null}" AuthScopesInvalid="False" Body="[&quot;&lt;!DOCTYPE html&gt;&#xD;&#xA;&lt;html&gt;&#xD;&#xA;&lt;body&gt;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&lt;p&gt;Dear All,&lt;/p&gt;&#xD;&#xA;&#xD;&#xA;&lt;p&gt;The  process has been Failed.&lt;br&gt;&lt;br&gt;Location : &quot;&quot;&lt;/p&gt;&lt;br&gt;&#xD;&#xA;&#xD;&#xA;&lt;p &gt;&lt;i style=&quot;&quot;color:DodgerBlue&quot;&quot;&gt;Best Regards&lt;/i&gt;&lt;br&gt;&#xD;&#xA;&lt;font size=&quot;&quot;3&quot;&quot; color=&quot;&quot;#03989e&quot;&quot;&gt;&lt;b&gt;Innobot Health &lt;/b&gt;&#xD;&#xA;&lt;/font&gt;&lt;br&gt;&#xD;&#xA;&lt;font size=&quot;&quot;2&quot;&quot; color=&quot;&quot;#03989e&quot;&quot;&gt;&lt;b&gt;ROBOTIC PROCESS AUTOMATION DEPARTMENT&lt;/b&gt;&lt;/font&gt;&lt;br&gt;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&lt;span style=&quot;&quot;font-size:12px&quot;&quot;&gt;1507 NW 34th Ave | Cape Coral, FL 33993.&lt;br&gt;&#xD;&#xA;Office: (888) 341-1009  &lt;br&gt;&#xD;&#xA;Website: www.innobothealth.com&lt;/span&gt;&lt;br&gt;&lt;/p&gt;&#xD;&#xA;&lt;img src=&quot;&quot;https://innobothealth.com/img/upload/innobot_practice_logo.png&quot;&quot; width=&quot;&quot;250&quot;&quot; height=&quot;&quot;80&quot;&quot;&gt;&#xD;&#xA;&lt;p style=&quot;&quot;font-size:12px&quot;&quot;&gt;&lt;b&gt;This Is a RPA system generated email. Please Do Not respond To this email.&lt;/b&gt;&lt;/p&gt;&#xD;&#xA;&#xD;&#xA;&lt;font size=&quot;&quot;1&quot;&quot; color=&quot;&quot;#808080&quot;&quot;&gt;&lt;b&gt;Confidentiality Notice: This electronic message is intended to be for the use only of the named recipient, and may contain information that is confidential or privileged. If you are not the intended recipient, you are hereby notified that any disclosure, copying, distribution or use of the contents of this message is strictly prohibited. If you have received this message in error or are not the named recipient, please notify us immediately by contacting the sender at the electronic mail address noted above, and delete and destroy all copies of this message. Thank you.&lt;/b&gt;&#xD;&#xA;&lt;/font&gt;&lt;br&gt;&#xD;&#xA;&#xD;&#xA;&lt;/body&gt;&#xD;&#xA;&lt;/html&gt;&quot;]" Cc="[{&quot;&quot;}]" DisplayName="No Reply Send Mail Message" sap:VirtualizedContainerService.HintSize="387.2,340.8" sap2010:WorkflowViewState.IdRef="SendEmail_2" IsDraft="False" IsHTML="True" Subject="[&quot; Process Failed - &quot;+Now.ToString(&quot;MM/dd/yyyy&quot;)]" To="[{&quot;&quot;}]">
+                        <uga:SendEmail AttachmentList="{x:Null}" Bcc="{x:Null}" ContinueOnError="{x:Null}" AuthScopesInvalid="False" Body="[&quot;&lt;!DOCTYPE html&gt;&#xA;&lt;html&gt;&#xA;&lt;body&gt;&#xA;&#xA;&#xA;&lt;p&gt;Dear All,&lt;/p&gt;&#xA;&#xA;&lt;p&gt;The  process has been Failed.&lt;br&gt;&lt;br&gt;Location : &quot;&quot;&lt;/p&gt;&lt;br&gt;&#xA;&#xA;&lt;p &gt;&lt;i style=&quot;&quot;color:DodgerBlue&quot;&quot;&gt;Best Regards&lt;/i&gt;&lt;br&gt;&#xA;&lt;font size=&quot;&quot;3&quot;&quot; color=&quot;&quot;#03989e&quot;&quot;&gt;&lt;b&gt;Innobot Health &lt;/b&gt;&#xA;&lt;/font&gt;&lt;br&gt;&#xA;&lt;font size=&quot;&quot;2&quot;&quot; color=&quot;&quot;#03989e&quot;&quot;&gt;&lt;b&gt;ROBOTIC PROCESS AUTOMATION DEPARTMENT&lt;/b&gt;&lt;/font&gt;&lt;br&gt;&#xA;&#xA;&#xA;&lt;span style=&quot;&quot;font-size:12px&quot;&quot;&gt;1507 NW 34th Ave | Cape Coral, FL 33993.&lt;br&gt;&#xA;Office: (888) 341-1009  &lt;br&gt;&#xA;Website: www.innobothealth.com&lt;/span&gt;&lt;br&gt;&lt;/p&gt;&#xA;&lt;img src=&quot;&quot;https://innobothealth.com/img/upload/innobot_practice_logo.png&quot;&quot; width=&quot;&quot;250&quot;&quot; height=&quot;&quot;80&quot;&quot;&gt;&#xA;&lt;p style=&quot;&quot;font-size:12px&quot;&quot;&gt;&lt;b&gt;This Is a RPA system generated email. Please Do Not respond To this email.&lt;/b&gt;&lt;/p&gt;&#xA;&#xA;&lt;font size=&quot;&quot;1&quot;&quot; color=&quot;&quot;#808080&quot;&quot;&gt;&lt;b&gt;Confidentiality Notice: This electronic message is intended to be for the use only of the named recipient, and may contain information that is confidential or privileged. If you are not the intended recipient, you are hereby notified that any disclosure, copying, distribution or use of the contents of this message is strictly prohibited. If you have received this message in error or are not the named recipient, please notify us immediately by contacting the sender at the electronic mail address noted above, and delete and destroy all copies of this message. Thank you.&lt;/b&gt;&#xA;&lt;/font&gt;&lt;br&gt;&#xA;&#xA;&lt;/body&gt;&#xA;&lt;/html&gt;&quot;]" Cc="[{&quot;&quot;}]" DisplayName="No Reply Send Mail Message" sap:VirtualizedContainerService.HintSize="387.2,340.8" sap2010:WorkflowViewState.IdRef="SendEmail_2" IsDraft="False" IsHTML="True" Subject="[&quot; Process Failed - &quot;+Now.ToString(&quot;MM/dd/yyyy&quot;)]" To="[{&quot;&quot;}]">
                           <uga:SendEmail.Attachments>
                             <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
                           </uga:SendEmail.Attachments>
@@ -204,5 +204,6 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:IfElseIf>
+    <TerminateWorkflow DisplayName="Terminate Workflow" sap:VirtualizedContainerService.HintSize="596,90.4" sap2010:WorkflowViewState.IdRef="TerminateWorkflow_1" Reason="[in_strErrorMessage]" />
   </Sequence>
 </Activity>
