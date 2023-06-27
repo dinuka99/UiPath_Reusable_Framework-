@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Test" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1114.4,602.4" sap2010:WorkflowViewState.IdRef="Test_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Test" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1114.4,602.4" sap2010:WorkflowViewState.IdRef="Test_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -34,6 +34,19 @@
       <x:String>System.Activities.Runtime.Collections</x:String>
       <x:String>System.Reflection</x:String>
       <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.Core.Activities.Orchestrator</x:String>
+      <x:String>UiPath.BAF.Infrastructure.Entity</x:String>
+      <x:String>UiPath.IntegrationService.Infrastructure.Descriptor</x:String>
+      <x:String>UiPath.BAF.Infrastructure.Enums</x:String>
+      <x:String>UiPath.BAF.Infrastructure.Telemetry</x:String>
+      <x:String>UiPath.BAF.Infrastructure</x:String>
+      <x:String>UiPath.BAF.Infrastructure.Connection</x:String>
+      <x:String>UiPath.OpenAI.IntegrationService.Activities</x:String>
+      <x:String>UiPath.IntegrationCore.Activities</x:String>
+      <x:String>UiPath.BAF.Activities</x:String>
+      <x:String>UiPath.BAF.Infrastructure.Contracts</x:String>
+      <x:String>UiPath.OpenAI.IntegrationService.Client</x:String>
+      <x:String>UiPath.OpenAI.IntegrationService.Client</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -87,63 +100,24 @@
       <AssemblyReference>WindowsBase</AssemblyReference>
       <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.BAF.Infrastructure</AssemblyReference>
+      <AssemblyReference>UiPath.IntegrationService.Infrastructure</AssemblyReference>
+      <AssemblyReference>UiPath.OpenAI.IntegrationService.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OpenAI.IntegrationService</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Test" sap:VirtualizedContainerService.HintSize="496,299.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Test" sap:VirtualizedContainerService.HintSize="449.6,104.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="textOut" />
+      <Variable x:TypeArguments="x:String" Name="textOut2" />
+      <Variable x:TypeArguments="x:String" Name="chatOut" />
+      <Variable x:TypeArguments="x:String" Name="chatOut2" />
+    </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="433.6,187.2" sap2010:WorkflowViewState.IdRef="TryCatch_1">
-      <TryCatch.Try>
-        <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'list item'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT">
-          <ui:Click.CursorPosition>
-            <ui:CursorPosition Position="Center">
-              <ui:CursorPosition.OffsetX>
-                <InArgument x:TypeArguments="x:Int32" />
-              </ui:CursorPosition.OffsetX>
-              <ui:CursorPosition.OffsetY>
-                <InArgument x:TypeArguments="x:Int32" />
-              </ui:CursorPosition.OffsetY>
-            </ui:CursorPosition>
-          </ui:Click.CursorPosition>
-          <ui:Click.Target>
-            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="bceeb41c-7d4e-4266-abee-1f3898c5db10" InformativeScreenshot="ac182568d1c28e17a410ae30e0c849e5" Selector="&lt;wnd app='explorer.exe' cls='WorkerW' idx='*' /&gt;&lt;wnd cls='SysListView32' title='FolderView' /&gt;&lt;ctrl name='Tag' role='list item' /&gt;">
-              <ui:Target.TimeoutMS>
-                <InArgument x:TypeArguments="x:Int32" />
-              </ui:Target.TimeoutMS>
-              <ui:Target.WaitForReady>
-                <InArgument x:TypeArguments="ui:WaitForReady" />
-              </ui:Target.WaitForReady>
-            </ui:Target>
-          </ui:Click.Target>
-        </ui:Click>
-      </TryCatch.Try>
-      <TryCatch.Catches>
-        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_1">
-          <sap:WorkflowViewStateService.ViewState>
-            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-              <x:Boolean x:Key="IsPinned">False</x:Boolean>
-            </scg:Dictionary>
-          </sap:WorkflowViewStateService.ViewState>
-          <ActivityAction x:TypeArguments="s:Exception">
-            <ActivityAction.Argument>
-              <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
-            </ActivityAction.Argument>
-            <Sequence sap:VirtualizedContainerService.HintSize="449.6,284" sap2010:WorkflowViewState.IdRef="Sequence_2">
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-              <TerminateWorkflow DisplayName="Terminate Workflow" sap:VirtualizedContainerService.HintSize="387.2,90.4" sap2010:WorkflowViewState.IdRef="TerminateWorkflow_1" Reason="Failed" />
-              <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="387.2,85.6" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;OK&quot;]" />
-            </Sequence>
-          </ActivityAction>
-        </Catch>
-      </TryCatch.Catches>
-    </TryCatch>
   </Sequence>
 </Activity>
