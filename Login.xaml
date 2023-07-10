@@ -84,7 +84,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message (&quot;System Login start&quot;)" sap:VirtualizedContainerService.HintSize="536,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;System Login start&quot;]" />
+    <ui:LogMessage DisplayName="Log Message (&quot;System Login start&quot;)" sap:VirtualizedContainerService.HintSize="536,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;System Login going to start...&quot;]" />
     <TryCatch DisplayName="System Login" sap:VirtualizedContainerService.HintSize="536,550.4" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -159,6 +159,8 @@
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
+                  <ui:LogMessage DisplayName="Log Message (Type Login details 01)" sap:VirtualizedContainerService.HintSize="387.2,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Going to start Login details...&quot;]" />
+                  <ui:LogMessage DisplayName="Log Message (Type Login details 02)" sap:VirtualizedContainerService.HintSize="387.2,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;Going to end Login details...&quot;]" />
                 </Sequence>
                 <FlowStep.Next>
                   <FlowDecision x:Name="__ReferenceID5" sap2010:Annotation.AnnotationText="Check login success" Condition="[boolLoginValue]" DisplayName="Boolean Login Condition" sap:VirtualizedContainerService.HintSize="144.8,118.4" sap2010:WorkflowViewState.IdRef="FlowDecision_2" True="{x:Reference __ReferenceID0}">
@@ -198,7 +200,7 @@
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <Assign DisplayName="Flow Failed with any Reasons" sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_2">
+                              <Assign DisplayName="Flow Failed with any Reasons 02" sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_2">
                                 <Assign.To>
                                   <OutArgument x:TypeArguments="x:Boolean">[boolFlowFailed]</OutArgument>
                                 </Assign.To>
@@ -206,7 +208,7 @@
                                   <InArgument x:TypeArguments="x:Boolean">True</InArgument>
                                 </Assign.Value>
                               </Assign>
-                              <Assign DisplayName="Flow Failed with Error Messages" sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_3">
+                              <Assign DisplayName="Flow Failed with Error Messages 02" sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_3">
                                 <Assign.To>
                                   <OutArgument x:TypeArguments="x:String">[strErrorMessage]</OutArgument>
                                 </Assign.To>
@@ -214,18 +216,12 @@
                                   <InArgument x:TypeArguments="x:String">Login Error (Check the Login PW and UN)</InArgument>
                                 </Assign.Value>
                               </Assign>
-                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="433.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Invoke the Email Notification....&quot;]" />
-                              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Framework\Email_Notification.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Framework\Email_Notification.xaml">
+                              <ui:LogMessage DisplayName="Log Message (On Error 01)" sap:VirtualizedContainerService.HintSize="433.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Invoke the Email Notification....&quot;]" />
+                              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Framework\Email_Notification.xaml - Invoke Workflow File 01" sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Framework\Email_Notification.xaml">
                                 <ui:InvokeWorkflowFile.Arguments>
-                                  <InArgument x:TypeArguments="x:Boolean" x:Key="in_boolFlowFailed">
-                                    <VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="boolFlowFailed" />
-                                  </InArgument>
-                                  <InArgument x:TypeArguments="x:String" x:Key="in_strErrorMessage">
-                                    <VisualBasicValue x:TypeArguments="x:String" ExpressionText="strErrorMessage" />
-                                  </InArgument>
-                                  <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">
-                                    <VisualBasicValue x:TypeArguments="scg:Dictionary(x:String, x:Object)" ExpressionText="Config" />
-                                  </InArgument>
+                                  <InArgument x:TypeArguments="x:Boolean" x:Key="in_boolFlowFailed">[boolFlowFailed]</InArgument>
+                                  <InArgument x:TypeArguments="x:String" x:Key="in_strErrorMessage">[strErrorMessage]</InArgument>
+                                  <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[Config]</InArgument>
                                 </ui:InvokeWorkflowFile.Arguments>
                               </ui:InvokeWorkflowFile>
                             </Sequence>
@@ -246,7 +242,7 @@
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <Assign sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_4">
+                              <Assign DisplayName="intNumOfAttempt value increasing Assign" sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_4">
                                 <Assign.To>
                                   <OutArgument x:TypeArguments="x:Int32">[intNumOfAttempt]</OutArgument>
                                 </Assign.To>
