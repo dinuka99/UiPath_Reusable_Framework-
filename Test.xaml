@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Test" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1114.4,602.4" sap2010:WorkflowViewState.IdRef="Test_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Test" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1114.4,1523.2" sap2010:WorkflowViewState.IdRef="Test_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ug="clr-namespace:UiPath.GSuite;assembly=UiPath.GSuite" xmlns:uga="clr-namespace:UiPath.GSuite.Activities;assembly=UiPath.GSuite.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -47,6 +47,11 @@
       <x:String>UiPath.BAF.Infrastructure.Contracts</x:String>
       <x:String>UiPath.OpenAI.IntegrationService.Client</x:String>
       <x:String>UiPath.OpenAI.IntegrationService.Client</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.GSuite.Activities.Enums</x:String>
+      <x:String>UiPath.GSuite</x:String>
+      <x:String>UiPath.GSuite.Contracts</x:String>
+      <x:String>UiPath.GSuite.Activities</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -105,14 +110,49 @@
       <AssemblyReference>UiPath.OpenAI.IntegrationService.Activities</AssemblyReference>
       <AssemblyReference>UiPath.OpenAI.IntegrationService</AssemblyReference>
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>UiPath.GSuite</AssemblyReference>
+      <AssemblyReference>System.CodeDom</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Test" sap:VirtualizedContainerService.HintSize="449.6,204.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Test" sap:VirtualizedContainerService.HintSize="545.6,1458.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message (Test 01)" sap:VirtualizedContainerService.HintSize="387.2,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Test Flow&quot;]" />
+    <ui:LogMessage DisplayName="Log Message (Test 01)" sap:VirtualizedContainerService.HintSize="483.2,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Test Flow&quot;]" />
+    <uga:GSuiteApplicationScope Account="{x:Null}" ApiKey="{x:Null}" ContinueOnError="{x:Null}" Folder="{x:Null}" KeyPath="{x:Null}" SecureCredentialSecret="{x:Null}" ServiceAccountEmail="{x:Null}" TimeoutMS="{x:Null}" UserEmail="{x:Null}" AuthenticationType="OAuthClientID" CredentialID="101823691738-qgigcs3u74oa1s0l7tl5qi58v1bin8d3.apps.googleusercontent.com" CredentialSecret="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" DataStoreLocation="Local disk" DisplayName="NoReply GSuite Application Scope" HasDomainWideAccesss="False" sap:VirtualizedContainerService.HintSize="483.2,1213.6" sap2010:WorkflowViewState.IdRef="GSuiteApplicationScope_1" KeyType="JSON" OAuthClient="" Password="notasecret" Services="Unselected">
+      <uga:GSuiteApplicationScope.AuthenticationScopes>
+        <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+      </uga:GSuiteApplicationScope.AuthenticationScopes>
+      <uga:GSuiteApplicationScope.Body>
+        <ActivityAction x:TypeArguments="ug:SimpleObjectContainer">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ug:SimpleObjectContainer" Name="GSuiteScope" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="449.6,1061.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uga:SendEmail AttachmentList="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" AuthScopesInvalid="False" Body="[&quot;&lt;!DOCTYPE html&gt;&#xD;&#xA;&lt;html&gt;&#xD;&#xA;&lt;body&gt;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&lt;p&gt;Dear [Investor Name],&lt;/p&gt;&#xD;&#xA;&#xD;&#xA;&lt;p&gt;I hope this email finds you well.&lt;p&gt;My name is Natasha Schlinkert, and I'm the founder and CEO of Innobot Health, a healthcare revenue cycle automation technology startup. We're a team of experienced healthcare professionals and technologists who are passionate about transforming the way healthcare organizations manage their revenue.&lt;/p&gt;&#xD;&#xA;&#xD;&#xA;&lt;p&gt;We're writing to you today because we're seeking investment to help us scale our business and reach more healthcare organizations. We have no previous funding, but we've generated $1M in annual gross revenue since our inception in August 2021.&lt;/p&gt;&#xD;&#xA;&#xD;&#xA;&lt;p&gt;Our technology automates the most time-consuming and labor-intensive tasks in the revenue cycle, such as claim processing, billing, and collections. This frees up healthcare organizations to focus on providing care, and it helps to improve the accuracy and efficiency of their revenue cycle management.&lt;/p&gt;&#xD;&#xA;&#xD;&#xA;&lt;p&gt;We're confident that our technology has the potential to revolutionize the healthcare industry. We're already working with a number of leading healthcare organizations, and we're seeing significant results. For example, one of our customers was able to reduce their claim processing time by 50% and their denial rate by 20%.&lt;/p&gt;&#xD;&#xA;&lt;p&gt;We're seeking $5M in investment to help us scale our business and reach more healthcare organizations. This funding will be used to:&lt;/p&gt;&#xD;&#xA;&lt;ul&gt;&#xD;&#xA;  &lt;li&gt;Expand our sales and marketing team&lt;/li&gt;&#xD;&#xA;  &lt;li&gt;Develop new features and functionality for our platform&lt;/li&gt;&#xD;&#xA;  &lt;li&gt;Accelerate our research and development efforts&lt;/li&gt;&#xD;&#xA;&lt;/ul&gt;&#xD;&#xA;&#xD;&#xA;&lt;p&gt; We believe that Innobot Health is the future of healthcare revenue cycle management. We have the technology, the team, and the vision to make a real difference in the industry. We're excited to partner with investors who share our vision and who are committed to helping us achieve our goals.&lt;/p&gt;&#xD;&#xA;&#xD;&#xA;&lt;p&gt;Thank you for your time and consideration. We look forward to hearing from you soon.&lt;/p&gt;&#xD;&#xA;&lt;/br&gt;&#xD;&#xA;&#xD;&#xA;&lt;img src=&quot;&quot;file://C:\Users\Dinuka Thilakarathne\OneDrive\Pictures\Camera Roll\competition-always-makes-you-stronger-And-better-competition-1914101-1.jpg&quot;&quot; alt=&quot;&quot;Logo&quot;&quot; /&gt;&#xD;&#xA;&#xD;&#xA;&lt;p &gt;&lt;i style=&quot;&quot;color:DodgerBlue&quot;&quot;&gt;Sincerely,&#xD;&#xA;&lt;/i&gt;&lt;br&gt;&#xD;&#xA;&lt;font size=&quot;&quot;3&quot;&quot; color=&quot;&quot;#03989e&quot;&quot;&gt;&lt;b&gt;&#xD;&#xA;Natasha Schlinkert Founder and CEO Innobot Health &lt;/b&gt;&#xD;&#xA;&lt;/font&gt;&lt;br&gt;&#xD;&#xA;&lt;font size=&quot;&quot;2&quot;&quot; color=&quot;&quot;#03989e&quot;&quot;&gt;&lt;b&gt;ROBOTIC PROCESS AUTOMATION DEPARTMENT&lt;/b&gt;&lt;/font&gt;&lt;br&gt;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&lt;span style=&quot;&quot;font-size:12px&quot;&quot;&gt;1507 NW 34th Ave | Cape Coral, FL 33993.&lt;br&gt;&#xD;&#xA;Office: (888) 341-1009  &lt;br&gt;&#xD;&#xA;Website: www.innobothealth.com&lt;/span&gt;&lt;br&gt;&lt;/p&gt;&#xD;&#xA;&lt;img src=&quot;&quot;https://cdn.vox-cdn.com/thumbor/uJppFNZSurv2VyqzQx0DwXPBlOI=/0x0:1100x619/1200x800/filters:focal(462x222:638x398)/cdn.vox-cdn.com/uploads/chorus_image/image/63864011/game_of_thrones.0.jpg&quot;&quot; width=&quot;&quot;250&quot;&quot; height=&quot;&quot;80&quot;&quot;&gt;&#xD;&#xA;&lt;p style=&quot;&quot;font-size:12px&quot;&quot;&gt;&lt;b&gt;This Is a RPA system generated email. Please Do Not respond To this email.&lt;/b&gt;&lt;/p&gt;&#xD;&#xA;&#xD;&#xA;&lt;font size=&quot;&quot;1&quot;&quot; color=&quot;&quot;#808080&quot;&quot;&gt;&lt;b&gt;Confidentiality Notice: This electronic message is intended to be for the use only of the named recipient, and may contain information that is confidential or privileged. If you are not the intended recipient, you are hereby notified that any disclosure, copying, distribution or use of the contents of this message is strictly prohibited. If you have received this message in error or are not the named recipient, please notify us immediately by contacting the sender at the electronic mail address noted above, and delete and destroy all copies of this message. Thank you.&lt;/b&gt;&#xD;&#xA;&lt;/font&gt;&lt;br&gt;&#xD;&#xA;&#xD;&#xA;&lt;/body&gt;&#xD;&#xA;&lt;/html&gt;&quot;]" DisplayName="No Reply Send Mail Message" sap:VirtualizedContainerService.HintSize="387.2,949.6" sap2010:WorkflowViewState.IdRef="SendEmail_1" IsDraft="False" IsHTML="True" Subject="[&quot;Test Email - &quot;+Now.ToString(&quot;MM/dd/yyyy&quot;)]" To="[{&quot;dthilakarathne@innobothealth.com&quot;}]">
+              <uga:SendEmail.Attachments>
+                <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+              </uga:SendEmail.Attachments>
+            </uga:SendEmail>
+          </Sequence>
+        </ActivityAction>
+      </uga:GSuiteApplicationScope.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uga:GSuiteApplicationScope>
   </Sequence>
 </Activity>
