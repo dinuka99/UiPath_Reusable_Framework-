@@ -1,13 +1,13 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Email_Notification" this:Email_Notification.in_strErrorMessage="Login failed" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System.ComponentModel.TypeConverter" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ug="clr-namespace:UiPath.GSuite;assembly=UiPath.GSuite" xmlns:uga="clr-namespace:UiPath.GSuite.Activities;assembly=UiPath.GSuite.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Email_Notification" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System.ComponentModel.TypeConverter" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ug="clr-namespace:UiPath.GSuite;assembly=UiPath.GSuite" xmlns:uga="clr-namespace:UiPath.GSuite.Activities;assembly=UiPath.GSuite.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
-    <x:Property Name="in_boolFlowFailed" Type="InArgument(x:Boolean)" />
     <x:Property Name="in_strErrorMessage" Type="InArgument(x:String)" />
     <x:Property Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
+    <x:Property Name="in_boolLoginStatus" Type="InArgument(x:Boolean)" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1114.4,1170.4</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1114.4,1123.2</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Email_Notification_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -102,17 +102,17 @@
       <AssemblyReference>WindowsBase</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Email_Notification" sap:VirtualizedContainerService.HintSize="562.4,968.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Email_Notification" sap:VirtualizedContainerService.HintSize="658.4,1058.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message (Email Notification 01)" sap:VirtualizedContainerService.HintSize="500,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Email Notification going to start....&quot;]" />
-    <ui:IfElseIf sap2010:Annotation.AnnotationText="Send a Email when the process successfully completed" DisplayName="Email Send Else If" sap:VirtualizedContainerService.HintSize="500,460.8" sap2010:WorkflowViewState.IdRef="IfElseIf_1">
+    <ui:LogMessage DisplayName="Log Message (Email Notification 01)" sap:VirtualizedContainerService.HintSize="596,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Email Notification going to start....&quot;]" />
+    <ui:IfElseIf sap2010:Annotation.AnnotationText="Send a Email when the process successfully completed" DisplayName="Email Send Else If" sap:VirtualizedContainerService.HintSize="596,550.4" sap2010:WorkflowViewState.IdRef="IfElseIf_1">
       <ui:IfElseIf.ConditionBlocks>
         <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
-          <ui:IfElseIfBlock BlockType="If" Condition="[Not in_boolFlowFailed]">
+          <ui:IfElseIfBlock BlockType="If" Condition="[Not in_boolLoginStatus]">
             <ui:IfElseIfBlock.Then>
               <Sequence DisplayName="Success Email Send" sap:VirtualizedContainerService.HintSize="449.6,83.2" sap2010:WorkflowViewState.IdRef="Sequence_3">
                 <sap:WorkflowViewStateService.ViewState>
@@ -121,7 +121,7 @@
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <uga:GSuiteApplicationScope Account="{x:Null}" ApiKey="{x:Null}" ContinueOnError="{x:Null}" Folder="{x:Null}" KeyPath="{x:Null}" SecureCredentialSecret="{x:Null}" ServiceAccountEmail="{x:Null}" TimeoutMS="{x:Null}" UserEmail="{x:Null}" AuthenticationType="OAuthClientID" CredentialID="101823691738-qgigcs3u74oa1s0l7tl5qi58v1bin8d3.apps.googleusercontent.com" CredentialSecret="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" DataStoreLocation="Local disk" DisplayName="Success NoReply GSuite Application Scope" HasDomainWideAccesss="False" sap:VirtualizedContainerService.HintSize="483.2,232.8" sap2010:WorkflowViewState.IdRef="GSuiteApplicationScope_1" KeyType="JSON" OAuthClient="" Password="notasecret" Services="Unselected">
+                <uga:GSuiteApplicationScope Account="{x:Null}" ApiKey="{x:Null}" ContinueOnError="{x:Null}" Folder="{x:Null}" KeyPath="{x:Null}" SecureCredentialSecret="{x:Null}" ServiceAccountEmail="{x:Null}" TimeoutMS="{x:Null}" UserEmail="{x:Null}" AuthenticationType="OAuthClientID" CredentialID="101823691738-qgigcs3u74oa1s0l7tl5qi58v1bin8d3.apps.googleusercontent.com" CredentialSecret="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" DataStoreLocation="Local disk" DisplayName="Success NoReply GSuite Application Scope" HasDomainWideAccesss="False" sap:VirtualizedContainerService.HintSize="483.2,192.8" sap2010:WorkflowViewState.IdRef="GSuiteApplicationScope_1" KeyType="JSON" OAuthClient="" Password="notasecret" Services="Unselected">
                   <uga:GSuiteApplicationScope.AuthenticationScopes>
                     <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
                   </uga:GSuiteApplicationScope.AuthenticationScopes>
@@ -156,9 +156,9 @@
               </Sequence>
             </ui:IfElseIfBlock.Then>
           </ui:IfElseIfBlock>
-          <ui:IfElseIfBlock BlockType="Else">
+          <ui:IfElseIfBlock BlockType="ElseIf" Condition="[in_boolLoginStatus =False]">
             <ui:IfElseIfBlock.Then>
-              <Sequence sap2010:Annotation.AnnotationText="Send a Email when any error orcured " DisplayName="Failed or Error Email Send" sap:VirtualizedContainerService.HintSize="449.6,114.4" sap2010:WorkflowViewState.IdRef="Sequence_5">
+              <Sequence sap2010:Annotation.AnnotationText="Send a Email when any error orcured " DisplayName="Login Procecss Error Emails" sap:VirtualizedContainerService.HintSize="449.6,114.4" sap2010:WorkflowViewState.IdRef="Sequence_8">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -166,7 +166,7 @@
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <uga:GSuiteApplicationScope Account="{x:Null}" ApiKey="{x:Null}" ContinueOnError="{x:Null}" Folder="{x:Null}" KeyPath="{x:Null}" SecureCredentialSecret="{x:Null}" ServiceAccountEmail="{x:Null}" TimeoutMS="{x:Null}" UserEmail="{x:Null}" AuthenticationType="OAuthClientID" CredentialID="101823691738-qgigcs3u74oa1s0l7tl5qi58v1bin8d3.apps.googleusercontent.com" CredentialSecret="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" DataStoreLocation="Local disk" DisplayName="Failed NoReply GSuite Application Scope" HasDomainWideAccesss="False" sap:VirtualizedContainerService.HintSize="387.2,52.8" sap2010:WorkflowViewState.IdRef="GSuiteApplicationScope_2" KeyType="JSON" OAuthClient="" Password="notasecret" Services="Unselected">
+                <uga:GSuiteApplicationScope Account="{x:Null}" ApiKey="{x:Null}" ContinueOnError="{x:Null}" Folder="{x:Null}" KeyPath="{x:Null}" SecureCredentialSecret="{x:Null}" ServiceAccountEmail="{x:Null}" TimeoutMS="{x:Null}" UserEmail="{x:Null}" AuthenticationType="OAuthClientID" CredentialID="101823691738-qgigcs3u74oa1s0l7tl5qi58v1bin8d3.apps.googleusercontent.com" CredentialSecret="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" DataStoreLocation="Local disk" DisplayName="Failed NoReply GSuite Application Scope" HasDomainWideAccesss="False" sap:VirtualizedContainerService.HintSize="387.2,52.8" sap2010:WorkflowViewState.IdRef="GSuiteApplicationScope_3" KeyType="JSON" OAuthClient="" Password="notasecret" Services="Unselected">
                   <uga:GSuiteApplicationScope.AuthenticationScopes>
                     <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
                   </uga:GSuiteApplicationScope.AuthenticationScopes>
@@ -175,14 +175,14 @@
                       <ActivityAction.Argument>
                         <DelegateInArgument x:TypeArguments="ug:SimpleObjectContainer" Name="GSuiteScope" />
                       </ActivityAction.Argument>
-                      <Sequence DisplayName="Error or Failed Send Email" sap:VirtualizedContainerService.HintSize="449.6,452.8" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                      <Sequence DisplayName="Error or Failed Send Email" sap:VirtualizedContainerService.HintSize="449.6,452.8" sap2010:WorkflowViewState.IdRef="Sequence_7">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <uga:SendEmail AttachmentList="{x:Null}" Bcc="{x:Null}" ContinueOnError="{x:Null}" AuthScopesInvalid="False" Body="[&quot;&lt;!DOCTYPE html&gt;&#xA;&lt;html&gt;&#xA;&lt;body&gt;&#xA;&#xA;&#xA;&lt;p&gt;Dear All,&lt;/p&gt;&#xA;&#xA;&lt;p&gt;The  process has been Failed.&lt;br&gt;&lt;br&gt;Location : &quot;&quot;&lt;/p&gt;&lt;br&gt;&#xA;&#xA;&lt;p &gt;&lt;i style=&quot;&quot;color:DodgerBlue&quot;&quot;&gt;Best Regards&lt;/i&gt;&lt;br&gt;&#xA;&lt;font size=&quot;&quot;3&quot;&quot; color=&quot;&quot;#03989e&quot;&quot;&gt;&lt;b&gt;Innobot Health &lt;/b&gt;&#xA;&lt;/font&gt;&lt;br&gt;&#xA;&lt;font size=&quot;&quot;2&quot;&quot; color=&quot;&quot;#03989e&quot;&quot;&gt;&lt;b&gt;ROBOTIC PROCESS AUTOMATION DEPARTMENT&lt;/b&gt;&lt;/font&gt;&lt;br&gt;&#xA;&#xA;&#xA;&lt;span style=&quot;&quot;font-size:12px&quot;&quot;&gt;1507 NW 34th Ave | Cape Coral, FL 33993.&lt;br&gt;&#xA;Office: (888) 341-1009  &lt;br&gt;&#xA;Website: www.innobothealth.com&lt;/span&gt;&lt;br&gt;&lt;/p&gt;&#xA;&lt;img src=&quot;&quot;https://innobothealth.com/img/upload/innobot_practice_logo.png&quot;&quot; width=&quot;&quot;250&quot;&quot; height=&quot;&quot;80&quot;&quot;&gt;&#xA;&lt;p style=&quot;&quot;font-size:12px&quot;&quot;&gt;&lt;b&gt;This Is a RPA system generated email. Please Do Not respond To this email.&lt;/b&gt;&lt;/p&gt;&#xA;&#xA;&lt;font size=&quot;&quot;1&quot;&quot; color=&quot;&quot;#808080&quot;&quot;&gt;&lt;b&gt;Confidentiality Notice: This electronic message is intended to be for the use only of the named recipient, and may contain information that is confidential or privileged. If you are not the intended recipient, you are hereby notified that any disclosure, copying, distribution or use of the contents of this message is strictly prohibited. If you have received this message in error or are not the named recipient, please notify us immediately by contacting the sender at the electronic mail address noted above, and delete and destroy all copies of this message. Thank you.&lt;/b&gt;&#xA;&lt;/font&gt;&lt;br&gt;&#xA;&#xA;&lt;/body&gt;&#xA;&lt;/html&gt;&quot;]" Cc="[{&quot;&quot;}]" DisplayName="Failed No Reply Send Mail Message" sap:VirtualizedContainerService.HintSize="387.2,340.8" sap2010:WorkflowViewState.IdRef="SendEmail_2" IsDraft="False" IsHTML="True" Subject="[&quot; Process Failed - &quot;+Now.ToString(&quot;MM/dd/yyyy&quot;)]" To="[{&quot;&quot;}]">
+                        <uga:SendEmail AttachmentList="{x:Null}" Bcc="{x:Null}" ContinueOnError="{x:Null}" AuthScopesInvalid="False" Body="[&quot;&lt;!DOCTYPE html&gt;&#xA;&lt;html&gt;&#xA;&lt;body&gt;&#xA;&#xA;&#xA;&lt;p&gt;Dear All,&lt;/p&gt;&#xA;&#xA;&lt;p&gt;The  process has been Failed.&lt;br&gt;&lt;br&gt;Location : &quot;&quot;&lt;/p&gt;&lt;br&gt;&#xA;&#xA;&lt;p &gt;&lt;i style=&quot;&quot;color:DodgerBlue&quot;&quot;&gt;Best Regards&lt;/i&gt;&lt;br&gt;&#xA;&lt;font size=&quot;&quot;3&quot;&quot; color=&quot;&quot;#03989e&quot;&quot;&gt;&lt;b&gt;Innobot Health &lt;/b&gt;&#xA;&lt;/font&gt;&lt;br&gt;&#xA;&lt;font size=&quot;&quot;2&quot;&quot; color=&quot;&quot;#03989e&quot;&quot;&gt;&lt;b&gt;ROBOTIC PROCESS AUTOMATION DEPARTMENT&lt;/b&gt;&lt;/font&gt;&lt;br&gt;&#xA;&#xA;&#xA;&lt;span style=&quot;&quot;font-size:12px&quot;&quot;&gt;1507 NW 34th Ave | Cape Coral, FL 33993.&lt;br&gt;&#xA;Office: (888) 341-1009  &lt;br&gt;&#xA;Website: www.innobothealth.com&lt;/span&gt;&lt;br&gt;&lt;/p&gt;&#xA;&lt;img src=&quot;&quot;https://innobothealth.com/img/upload/innobot_practice_logo.png&quot;&quot; width=&quot;&quot;250&quot;&quot; height=&quot;&quot;80&quot;&quot;&gt;&#xA;&lt;p style=&quot;&quot;font-size:12px&quot;&quot;&gt;&lt;b&gt;This Is a RPA system generated email. Please Do Not respond To this email.&lt;/b&gt;&lt;/p&gt;&#xA;&#xA;&lt;font size=&quot;&quot;1&quot;&quot; color=&quot;&quot;#808080&quot;&quot;&gt;&lt;b&gt;Confidentiality Notice: This electronic message is intended to be for the use only of the named recipient, and may contain information that is confidential or privileged. If you are not the intended recipient, you are hereby notified that any disclosure, copying, distribution or use of the contents of this message is strictly prohibited. If you have received this message in error or are not the named recipient, please notify us immediately by contacting the sender at the electronic mail address noted above, and delete and destroy all copies of this message. Thank you.&lt;/b&gt;&#xA;&lt;/font&gt;&lt;br&gt;&#xA;&#xA;&lt;/body&gt;&#xA;&lt;/html&gt;&quot;]" Cc="[{&quot;&quot;}]" DisplayName="Failed No Reply Send Mail Message" sap:VirtualizedContainerService.HintSize="387.2,340.8" sap2010:WorkflowViewState.IdRef="SendEmail_3" IsDraft="False" IsHTML="True" Subject="[&quot; Process Failed - &quot;+Now.ToString(&quot;MM/dd/yyyy&quot;)]" To="[{&quot;&quot;}]">
                           <uga:SendEmail.Attachments>
                             <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
                           </uga:SendEmail.Attachments>
@@ -197,7 +197,7 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </uga:GSuiteApplicationScope>
-                <ui:LogMessage DisplayName="Log Message (Email Notification Failed or Error)" sap:VirtualizedContainerService.HintSize="387.2,88" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Email Notification going to Else condition couz failed or Error....&quot;]" />
+                <ui:LogMessage DisplayName="Log Message (Email Notification Failed or Error)" sap:VirtualizedContainerService.HintSize="387.2,88" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;Email Notification going to Else condition couz failed or Error....&quot;]" />
               </Sequence>
             </ui:IfElseIfBlock.Then>
           </ui:IfElseIfBlock>
@@ -211,7 +211,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:IfElseIf>
-    <TerminateWorkflow DisplayName="Process Stop Terminate Workflow" sap:VirtualizedContainerService.HintSize="500,90.4" sap2010:WorkflowViewState.IdRef="TerminateWorkflow_1" Reason="[in_strErrorMessage]" />
-    <ui:LogMessage DisplayName="Log Message (Email Notification 02)" sap:VirtualizedContainerService.HintSize="500,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Email Notification going to end...&quot;]" />
+    <TerminateWorkflow DisplayName="Process Stop Terminate Workflow" sap:VirtualizedContainerService.HintSize="596,90.4" sap2010:WorkflowViewState.IdRef="TerminateWorkflow_1" Reason="[in_strErrorMessage]" />
+    <ui:LogMessage DisplayName="Log Message (Email Notification 02)" sap:VirtualizedContainerService.HintSize="596,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Email Notification going to end...&quot;]" />
   </Sequence>
 </Activity>

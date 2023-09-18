@@ -156,15 +156,15 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <TryCatch.Try>
-              <Sequence DisplayName="Application Login Success attempts " sap:VirtualizedContainerService.HintSize="449.6,523.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+              <Sequence DisplayName="Application Login Success attempts " sap:VirtualizedContainerService.HintSize="496,688.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:LogMessage DisplayName="Log Message (Type Login details 01)" sap:VirtualizedContainerService.HintSize="387.2,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Going to start Login details...&quot;]" />
-                <ui:LogMessage DisplayName="Log Message (Type Login details 02)" sap:VirtualizedContainerService.HintSize="387.2,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Going to end Login details...&quot;]" />
-                <Pick sap:VirtualizedContainerService.HintSize="387.2,52.8" sap2010:WorkflowViewState.IdRef="Pick_1">
+                <ui:LogMessage DisplayName="Log Message (Type Login details 01)" sap:VirtualizedContainerService.HintSize="433.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Going to start Login details...&quot;]" />
+                <ui:LogMessage DisplayName="Log Message (Type Login details 02)" sap:VirtualizedContainerService.HintSize="433.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Going to end Login details...&quot;]" />
+                <Pick sap:VirtualizedContainerService.HintSize="433.6,52.8" sap2010:WorkflowViewState.IdRef="Pick_1">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -204,52 +204,82 @@
                     </PickBranch.Trigger>
                   </PickBranch>
                 </Pick>
-                <uix:NCheckState DisplayName="Check Successfuly Login into system" sap:VirtualizedContainerService.HintSize="387.2,52.8" sap2010:WorkflowViewState.IdRef="NCheckState_2" Version="V3">
-                  <uix:NCheckState.IfExists>
-                    <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="496,240" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                <Assign sap2010:Annotation.AnnotationText="This bool value should include when succesfully login into system and add this last inside the login" sap:VirtualizedContainerService.HintSize="433.6,125.6" sap2010:WorkflowViewState.IdRef="Assign_6">
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="x:Boolean">[boolLoginStatus]</OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                  </Assign.Value>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Assign>
+                <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="433.6,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+                  <ui:CommentOut.Body>
+                    <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="1060.8,611.2" sap2010:WorkflowViewState.IdRef="Sequence_8">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <Assign sap2010:Annotation.AnnotationText="This bool value should include when succesfully login into system and add this last inside the login" sap:VirtualizedContainerService.HintSize="433.6,126.4" sap2010:WorkflowViewState.IdRef="Assign_5">
-                        <Assign.To>
-                          <OutArgument x:TypeArguments="x:Boolean">[boolLoginStatus]</OutArgument>
-                        </Assign.To>
-                        <Assign.Value>
-                          <InArgument x:TypeArguments="x:Boolean">True</InArgument>
-                        </Assign.Value>
+                      <uix:NCheckState DisplayName="Check Successfuly Login into system" sap:VirtualizedContainerService.HintSize="998.4,499.2" sap2010:WorkflowViewState.IdRef="NCheckState_2" Version="V3">
+                        <uix:NCheckState.IfExists>
+                          <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="496,241.6" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <Assign sap2010:Annotation.AnnotationText="This bool value should include when succesfully login into system and add this last inside the login" sap:VirtualizedContainerService.HintSize="433.6,126.4" sap2010:WorkflowViewState.IdRef="Assign_5">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="x:Boolean">[boolLoginStatus]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                              </Assign.Value>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </Assign>
+                          </Sequence>
+                        </uix:NCheckState.IfExists>
+                        <uix:NCheckState.IfNotExists>
+                          <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="449.6,106.4" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </Sequence>
+                        </uix:NCheckState.IfNotExists>
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                      </Assign>
+                      </uix:NCheckState>
                     </Sequence>
-                  </uix:NCheckState.IfExists>
-                  <uix:NCheckState.IfNotExists>
-                    <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="449.6,106.4" sap2010:WorkflowViewState.IdRef="Sequence_7">
-                      <sap:WorkflowViewStateService.ViewState>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                        </scg:Dictionary>
-                      </sap:WorkflowViewStateService.ViewState>
-                    </Sequence>
-                  </uix:NCheckState.IfNotExists>
+                  </ui:CommentOut.Body>
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                </uix:NCheckState>
+                </ui:CommentOut>
               </Sequence>
             </TryCatch.Try>
             <TryCatch.Catches>
-              <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="502.4,692.8" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+              <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="499.2,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_1">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
@@ -308,31 +338,44 @@
                       <av:Size x:Key="ShapeSize">200,83.2</av:Size>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Sequence DisplayName="Login Failed " sap:VirtualizedContainerService.HintSize="200,83.2" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <Sequence DisplayName="Login Status Notification" sap:VirtualizedContainerService.HintSize="472.79999999999995,813.6" sap2010:WorkflowViewState.IdRef="Sequence_3">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <If Condition="[boolLoginStatus]" DisplayName="Login Bool If" sap:VirtualizedContainerService.HintSize="410.4,533.6" sap2010:WorkflowViewState.IdRef="If_1">
+                    <If Condition="[boolLoginStatus]" DisplayName="Login Bool If" sap:VirtualizedContainerService.HintSize="410.4,701.6" sap2010:WorkflowViewState.IdRef="If_1">
                       <If.Then>
-                        <Sequence sap:VirtualizedContainerService.HintSize="376.8,175.2" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                        <Sequence sap:VirtualizedContainerService.HintSize="376.8,182.4" sap2010:WorkflowViewState.IdRef="Sequence_4">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="333.6,85.6" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[&quot;Login OK&quot;]" />
+                          <ui:LogMessage DisplayName="04 Log Message" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Login Success...!&quot;]" />
                         </Sequence>
                       </If.Then>
                       <If.Else>
-                        <Sequence sap:VirtualizedContainerService.HintSize="376.8,175.2" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                        <Sequence sap:VirtualizedContainerService.HintSize="376.8,336" sap2010:WorkflowViewState.IdRef="Sequence_5">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="333.6,85.6" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Send Error Message&quot;]" />
+                          <ui:LogMessage DisplayName="05 Log Message" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;Login max attempts execeeded ...!&quot;]" />
+                          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Framework\Email_Notification.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="333.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Framework\Email_Notification.xaml">
+                            <ui:InvokeWorkflowFile.Arguments>
+                              <InArgument x:TypeArguments="x:String" x:Key="in_strErrorMessage">
+                                <VisualBasicValue x:TypeArguments="x:String" ExpressionText="strErrorMessage" />
+                              </InArgument>
+                              <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">
+                                <VisualBasicValue x:TypeArguments="scg:Dictionary(x:String, x:Object)" ExpressionText="Config" />
+                              </InArgument>
+                              <InArgument x:TypeArguments="x:Boolean" x:Key="in_boolLoginStatus">
+                                <VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="boolLoginStatus" />
+                              </InArgument>
+                            </ui:InvokeWorkflowFile.Arguments>
+                          </ui:InvokeWorkflowFile>
                         </Sequence>
                       </If.Else>
                     </If>
