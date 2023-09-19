@@ -3,6 +3,7 @@
     <x:Property Name="in_strErrorMessage" Type="InArgument(x:String)" />
     <x:Property Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
     <x:Property Name="in_boolLoginStatus" Type="InArgument(x:Boolean)" />
+    <x:Property Name="in_processEndStatus" Type="InArgument(x:String)" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
