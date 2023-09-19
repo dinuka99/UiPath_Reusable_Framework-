@@ -5,7 +5,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1088,701.6</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1114.4,701.6</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Login_01_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -110,9 +110,9 @@
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-        <av:Point x:Key="ShapeLocation">270,2.5</av:Point>
+        <av:Point x:Key="ShapeLocation">310,2.5</av:Point>
         <av:Size x:Key="ShapeSize">60,75.2</av:Size>
-        <av:PointCollection x:Key="ConnectorLocation">300,77.7 300,127.7</av:PointCollection>
+        <av:PointCollection x:Key="ConnectorLocation">340,77.7 340,127.7</av:PointCollection>
         <x:Double x:Key="Width">1064.8</x:Double>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
@@ -122,9 +122,9 @@
     <FlowStep x:Name="__ReferenceID4">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <av:Point x:Key="ShapeLocation">83.19999999999999,127.7</av:Point>
+          <av:Point x:Key="ShapeLocation">123.19999999999999,127.7</av:Point>
           <av:Size x:Key="ShapeSize">433.6,81.6</av:Size>
-          <av:PointCollection x:Key="ConnectorLocation">300,209.3 300,259.29999999999995</av:PointCollection>
+          <av:PointCollection x:Key="ConnectorLocation">340,208.5 340,259.29999999999995</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <Assign sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_1">
@@ -144,12 +144,12 @@
         <FlowStep x:Name="__ReferenceID0">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <av:Point x:Key="ShapeLocation">200,259.29999999999995</av:Point>
+              <av:Point x:Key="ShapeLocation">240,259.29999999999995</av:Point>
               <av:Size x:Key="ShapeSize">200,52.8</av:Size>
-              <av:PointCollection x:Key="ConnectorLocation">300,312.09999999999997 300,342.09999999999997 300.40000000000003,342.09999999999997 300.40000000000003,362.09999999999997</av:PointCollection>
+              <av:PointCollection x:Key="ConnectorLocation">340,312.09999999999997 340,342.09999999999997 340.40000000000003,342.09999999999997 340.40000000000003,362.09999999999997</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <TryCatch DisplayName="Login Try Catch" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+          <TryCatch DisplayName="Login Try Catch" sap:VirtualizedContainerService.HintSize="532.8,920" sap2010:WorkflowViewState.IdRef="TryCatch_1">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -164,46 +164,63 @@
                 </sap:WorkflowViewStateService.ViewState>
                 <ui:LogMessage DisplayName="Log Message (Type Login details 01)" sap:VirtualizedContainerService.HintSize="433.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Going to start Login details...&quot;]" />
                 <ui:LogMessage DisplayName="Log Message (Type Login details 02)" sap:VirtualizedContainerService.HintSize="433.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Going to end Login details...&quot;]" />
-                <Pick sap:VirtualizedContainerService.HintSize="433.6,52.8" sap2010:WorkflowViewState.IdRef="Pick_1">
+                <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="433.6,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+                  <ui:CommentOut.Body>
+                    <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="449.6,164.8" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <Pick sap:VirtualizedContainerService.HintSize="387.2,52.8" sap2010:WorkflowViewState.IdRef="Pick_1">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <PickBranch sap:VirtualizedContainerService.HintSize="383.2,346.4" sap2010:WorkflowViewState.IdRef="PickBranch_1">
+                          <PickBranch.Trigger>
+                            <ui:UiElementExists Exists="{x:Null}" DisplayName="Element Exists" sap:VirtualizedContainerService.HintSize="333.6,86.4" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
+                              <ui:UiElementExists.Target>
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="bccc1efb-c235-4c7b-ae61-2317d5aa1535">
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                  <ui:Target.WaitForReady>
+                                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                                  </ui:Target.WaitForReady>
+                                </ui:Target>
+                              </ui:UiElementExists.Target>
+                            </ui:UiElementExists>
+                          </PickBranch.Trigger>
+                        </PickBranch>
+                        <PickBranch sap:VirtualizedContainerService.HintSize="383.2,346.4" sap2010:WorkflowViewState.IdRef="PickBranch_2">
+                          <PickBranch.Trigger>
+                            <ui:UiElementExists Exists="{x:Null}" DisplayName="Element Exists" sap:VirtualizedContainerService.HintSize="333.6,86.4" sap2010:WorkflowViewState.IdRef="UiElementExists_2">
+                              <ui:UiElementExists.Target>
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="bccc1efb-c235-4c7b-ae61-2317d5aa1535">
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                  <ui:Target.WaitForReady>
+                                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                                  </ui:Target.WaitForReady>
+                                </ui:Target>
+                              </ui:UiElementExists.Target>
+                            </ui:UiElementExists>
+                          </PickBranch.Trigger>
+                        </PickBranch>
+                      </Pick>
+                    </Sequence>
+                  </ui:CommentOut.Body>
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <PickBranch sap:VirtualizedContainerService.HintSize="383.2,346.4" sap2010:WorkflowViewState.IdRef="PickBranch_1">
-                    <PickBranch.Trigger>
-                      <ui:UiElementExists Exists="{x:Null}" DisplayName="Element Exists" sap:VirtualizedContainerService.HintSize="333.6,86.4" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
-                        <ui:UiElementExists.Target>
-                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="bccc1efb-c235-4c7b-ae61-2317d5aa1535">
-                            <ui:Target.TimeoutMS>
-                              <InArgument x:TypeArguments="x:Int32" />
-                            </ui:Target.TimeoutMS>
-                            <ui:Target.WaitForReady>
-                              <InArgument x:TypeArguments="ui:WaitForReady" />
-                            </ui:Target.WaitForReady>
-                          </ui:Target>
-                        </ui:UiElementExists.Target>
-                      </ui:UiElementExists>
-                    </PickBranch.Trigger>
-                  </PickBranch>
-                  <PickBranch sap:VirtualizedContainerService.HintSize="383.2,346.4" sap2010:WorkflowViewState.IdRef="PickBranch_2">
-                    <PickBranch.Trigger>
-                      <ui:UiElementExists Exists="{x:Null}" DisplayName="Element Exists" sap:VirtualizedContainerService.HintSize="333.6,86.4" sap2010:WorkflowViewState.IdRef="UiElementExists_2">
-                        <ui:UiElementExists.Target>
-                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="bccc1efb-c235-4c7b-ae61-2317d5aa1535">
-                            <ui:Target.TimeoutMS>
-                              <InArgument x:TypeArguments="x:Int32" />
-                            </ui:Target.TimeoutMS>
-                            <ui:Target.WaitForReady>
-                              <InArgument x:TypeArguments="ui:WaitForReady" />
-                            </ui:Target.WaitForReady>
-                          </ui:Target>
-                        </ui:UiElementExists.Target>
-                      </ui:UiElementExists>
-                    </PickBranch.Trigger>
-                  </PickBranch>
-                </Pick>
+                </ui:CommentOut>
                 <Assign sap2010:Annotation.AnnotationText="This bool value should include when succesfully login into system and add this last inside the login" sap:VirtualizedContainerService.HintSize="433.6,125.6" sap2010:WorkflowViewState.IdRef="Assign_6">
                   <Assign.To>
                     <OutArgument x:TypeArguments="x:Boolean">[boolLoginStatus]</OutArgument>
@@ -317,25 +334,55 @@
             </TryCatch.Catches>
           </TryCatch>
           <FlowStep.Next>
-            <FlowDecision x:Name="__ReferenceID1" Condition="[boolLoginStatus And intNumOfAttempt&lt;4]" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="79.2,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
+            <FlowDecision x:Name="__ReferenceID1" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="79.2,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
+              <FlowDecision.Condition>
+                <VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="not boolLoginStatus  And intNumOfAttempt&lt;4" />
+              </FlowDecision.Condition>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                  <av:Point x:Key="ShapeLocation">260.8,362.09999999999997</av:Point>
+                  <av:Point x:Key="ShapeLocation">300.8,362.09999999999997</av:Point>
                   <av:Size x:Key="ShapeSize">79.2,87.2</av:Size>
-                  <av:PointCollection x:Key="FalseConnector">340,405.7 370,405.7 370,460 433.19999999999993,460</av:PointCollection>
-                  <av:PointCollection x:Key="TrueConnector">260.8,405.7 230.8,405.7 230.8,470 200,470</av:PointCollection>
+                  <av:PointCollection x:Key="TrueConnector">300.8,405.7 260,405.7 260,479.59999999999997</av:PointCollection>
+                  <av:PointCollection x:Key="FalseConnector">380,405.7 410,405.7 410,430 590,430</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <FlowDecision.True>
+                <FlowStep x:Name="__ReferenceID2">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <av:Point x:Key="ShapeLocation">43.2,479.59999999999997</av:Point>
+                      <av:Size x:Key="ShapeSize">433.6,81.6</av:Size>
+                      <av:PointCollection x:Key="ConnectorLocation">43.2,520 13.200000000000003,520 13.200000000000003,285.69999999999993 240,285.69999999999993</av:PointCollection>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Assign DisplayName="Increasing int value ++1 Assign" sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_4">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:Int32">[intNumOfAttempt]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:Int32">[intNumOfAttempt+1]</InArgument>
+                    </Assign.Value>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </Assign>
+                  <FlowStep.Next>
+                    <x:Reference>__ReferenceID0</x:Reference>
+                  </FlowStep.Next>
+                </FlowStep>
+              </FlowDecision.True>
+              <FlowDecision.False>
                 <FlowStep x:Name="__ReferenceID3">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <av:Point x:Key="ShapeLocation">0,428.4</av:Point>
-                      <av:Size x:Key="ShapeSize">200,83.2</av:Size>
+                      <av:Point x:Key="ShapeLocation">590,388.4</av:Point>
+                      <av:Size x:Key="ShapeSize">222.4,83.2</av:Size>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Sequence DisplayName="Login Status Notification" sap:VirtualizedContainerService.HintSize="472.79999999999995,813.6" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <Sequence DisplayName="Login Status Notification" sap:VirtualizedContainerService.HintSize="222.4,83.2" sap2010:WorkflowViewState.IdRef="Sequence_3">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -362,15 +409,9 @@
                           <ui:LogMessage DisplayName="05 Log Message" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;Login max attempts execeeded ...!&quot;]" />
                           <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Framework\Email_Notification.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="333.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Framework\Email_Notification.xaml">
                             <ui:InvokeWorkflowFile.Arguments>
-                              <InArgument x:TypeArguments="x:String" x:Key="in_strErrorMessage">
-                                <VisualBasicValue x:TypeArguments="x:String" ExpressionText="strErrorMessage" />
-                              </InArgument>
-                              <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">
-                                <VisualBasicValue x:TypeArguments="scg:Dictionary(x:String, x:Object)" ExpressionText="Config" />
-                              </InArgument>
-                              <InArgument x:TypeArguments="x:Boolean" x:Key="in_boolLoginStatus">
-                                <VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="boolLoginStatus" />
-                              </InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="in_strErrorMessage">[strErrorMessage]</InArgument>
+                              <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[Config]</InArgument>
+                              <InArgument x:TypeArguments="x:Boolean" x:Key="in_boolLoginStatus">[boolLoginStatus]</InArgument>
                               <InArgument x:TypeArguments="x:String" x:Key="in_processEndStatus" />
                             </ui:InvokeWorkflowFile.Arguments>
                           </ui:InvokeWorkflowFile>
@@ -378,33 +419,6 @@
                       </If.Else>
                     </If>
                   </Sequence>
-                </FlowStep>
-              </FlowDecision.True>
-              <FlowDecision.False>
-                <FlowStep x:Name="__ReferenceID2">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <av:Point x:Key="ShapeLocation">433.19999999999993,419.2</av:Point>
-                      <av:Size x:Key="ShapeSize">433.6,81.6</av:Size>
-                      <av:PointCollection x:Key="ConnectorLocation">650,419.2 650,285.69999999999993 400,285.69999999999993</av:PointCollection>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <Assign DisplayName="Increasing int value ++1 Assign" sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_4">
-                    <Assign.To>
-                      <OutArgument x:TypeArguments="x:Int32">[intNumOfAttempt]</OutArgument>
-                    </Assign.To>
-                    <Assign.Value>
-                      <InArgument x:TypeArguments="x:Int32">[intNumOfAttempt+1]</InArgument>
-                    </Assign.Value>
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                  </Assign>
-                  <FlowStep.Next>
-                    <x:Reference>__ReferenceID0</x:Reference>
-                  </FlowStep.Next>
                 </FlowStep>
               </FlowDecision.False>
             </FlowDecision>
