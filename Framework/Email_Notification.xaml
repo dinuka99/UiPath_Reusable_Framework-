@@ -8,7 +8,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1114.4,1471.2</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1114.4,1318.4</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Email_Notification_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -103,14 +103,14 @@
       <AssemblyReference>WindowsBase</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Email_Notification" sap:VirtualizedContainerService.HintSize="658.4,928" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Email_Notification" sap:VirtualizedContainerService.HintSize="562.4,1253.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message (Email Notification 01)" sap:VirtualizedContainerService.HintSize="596,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Email Notification going to start....&quot;]" />
-    <ui:IfElseIf sap2010:Annotation.AnnotationText="Send a Email when the process successfully completed" DisplayName="Email Send Else If" sap:VirtualizedContainerService.HintSize="596,550.4" sap2010:WorkflowViewState.IdRef="IfElseIf_1">
+    <ui:LogMessage DisplayName="Log Message (Email Notification 01)" sap:VirtualizedContainerService.HintSize="500,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Email Notification going to start....&quot;]" />
+    <ui:IfElseIf sap2010:Annotation.AnnotationText="Send a Email when the process successfully completed" DisplayName="Email Send Else If" sap:VirtualizedContainerService.HintSize="500,550.4" sap2010:WorkflowViewState.IdRef="IfElseIf_1">
       <ui:IfElseIf.ConditionBlocks>
         <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
           <ui:IfElseIfBlock BlockType="If" Condition="[Not in_boolLoginStatus]">
@@ -154,7 +154,7 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </uga:GSuiteApplicationScope>
-                <ui:LogMessage DisplayName="Log Message (Email Notification Failed or Error)" sap:VirtualizedContainerService.HintSize="387.2,88" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;Email Notification going to Else condition couz failed or Error....&quot;]" />
+                <ui:LogMessage DisplayName="Log Message (Email Notification Failed or Error)" sap:VirtualizedContainerService.HintSize="387.2,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;Email Notification going to Else condition couz failed or Error....&quot;]" />
               </Sequence>
             </ui:IfElseIfBlock.Then>
           </ui:IfElseIfBlock>
@@ -212,6 +212,6 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:IfElseIf>
-    <ui:LogMessage DisplayName="Log Message (Email Notification 02)" sap:VirtualizedContainerService.HintSize="596,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Email Notification going to end...&quot;]" />
+    <ui:LogMessage DisplayName="Log Message (Email Notification 02)" sap:VirtualizedContainerService.HintSize="500,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Email Notification going to end...&quot;]" />
   </Sequence>
 </Activity>
