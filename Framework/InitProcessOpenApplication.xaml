@@ -114,7 +114,7 @@
           <av:PointCollection x:Key="ConnectorLocation">610,209.3 610,259.29999999999995</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Assign sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_1">
+      <Assign DisplayName="int Assign" sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_1">
         <Assign.To>
           <OutArgument x:TypeArguments="x:Int32">[intOpenAttempt]</OutArgument>
         </Assign.To>
@@ -151,7 +151,7 @@
                 </sap:WorkflowViewStateService.ViewState>
                 <ui:LogMessage DisplayName="06 Log Message" sap:VirtualizedContainerService.HintSize="433.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Init Process open application start...!&quot;]" />
                 <ui:LogMessage DisplayName="07 Log Message" sap:VirtualizedContainerService.HintSize="433.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Init Process open application end...!&quot;]" />
-                <Assign DisplayName="Bool value Assign" sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_2">
+                <Assign DisplayName="Bool value Assign0" sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_2">
                   <Assign.To>
                     <OutArgument x:TypeArguments="x:Boolean">[boolOpenAppStatus]</OutArgument>
                   </Assign.To>
@@ -214,7 +214,7 @@
                       <av:PointCollection x:Key="ConnectorLocation">236.8,379.2 236.8,285.69999999999993 510,285.69999999999993</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Assign sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_4">
+                  <Assign DisplayName="int ++ Assign" sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_4">
                     <Assign.To>
                       <OutArgument x:TypeArguments="x:Int32">[intOpenAttempt]</OutArgument>
                     </Assign.To>
@@ -240,13 +240,13 @@
                       <av:Size x:Key="ShapeSize">200,83.2</av:Size>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Sequence DisplayName="Success App Open" sap:VirtualizedContainerService.HintSize="572.8,935.2" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <Sequence DisplayName="Success App Open" sap:VirtualizedContainerService.HintSize="200,83.2" sap2010:WorkflowViewState.IdRef="Sequence_3">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <If Condition="[boolOpenAppStatus]" sap:VirtualizedContainerService.HintSize="510.4,823.2" sap2010:WorkflowViewState.IdRef="If_1">
+                    <If Condition="[boolOpenAppStatus]" DisplayName="If openAppStatus bool value" sap:VirtualizedContainerService.HintSize="510.4,823.2" sap2010:WorkflowViewState.IdRef="If_1">
                       <If.Then>
                         <Sequence sap:VirtualizedContainerService.HintSize="376.8,182.4" sap2010:WorkflowViewState.IdRef="Sequence_4">
                           <sap:WorkflowViewStateService.ViewState>
@@ -265,7 +265,7 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                           <ui:LogMessage DisplayName="11 Log Message" sap:VirtualizedContainerService.HintSize="433.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;init procecss open app NOT opened...!&quot;]" />
-                          <Assign sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_5">
+                          <Assign DisplayName="Assign 11" sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_5">
                             <Assign.To>
                               <OutArgument x:TypeArguments="x:String">[strErrorMessage]</OutArgument>
                             </Assign.To>
@@ -275,12 +275,8 @@
                           </Assign>
                           <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Framework\Email_Notification.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Framework\Email_Notification.xaml">
                             <ui:InvokeWorkflowFile.Arguments>
-                              <InArgument x:TypeArguments="x:String" x:Key="in_strErrorMessage">
-                                <VisualBasicValue x:TypeArguments="x:String" ExpressionText="strErrorMessage" />
-                              </InArgument>
-                              <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">
-                                <VisualBasicValue x:TypeArguments="scg:Dictionary(x:String, x:Object)" ExpressionText="in_Config" />
-                              </InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="in_strErrorMessage">[strErrorMessage]</InArgument>
+                              <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
                               <InArgument x:TypeArguments="x:Boolean" x:Key="in_boolLoginStatus" />
                               <InArgument x:TypeArguments="x:String" x:Key="in_processEndStatus" />
                             </ui:InvokeWorkflowFile.Arguments>

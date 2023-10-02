@@ -6,7 +6,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>519.2,1518.4</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1114.4,1518.4</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>TakeScreenshot_2</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -91,7 +91,7 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:TakeScreenshot Screenshot="{x:Null}" WaitBefore="{x:Null}" DisplayName="Take Screenshot" sap:VirtualizedContainerService.HintSize="467.2,86.4" sap2010:WorkflowViewState.IdRef="TakeScreenshot_3">
+    <ui:TakeScreenshot Screenshot="{x:Null}" WaitBefore="{x:Null}" DisplayName="01 Take Screenshot" sap:VirtualizedContainerService.HintSize="467.2,86.4" sap2010:WorkflowViewState.IdRef="TakeScreenshot_3">
       <ui:TakeScreenshot.Target>
         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="ac4de8b3-bd9e-41b3-ae8b-198afd851906">
           <ui:Target.TimeoutMS>
@@ -103,7 +103,7 @@
         </ui:Target>
       </ui:TakeScreenshot.Target>
     </ui:TakeScreenshot>
-    <ui:TakeScreenshot WaitBefore="{x:Null}" sap2010:Annotation.AnnotationText="The whole screen is captured." DisplayName="Take screenshot" sap:VirtualizedContainerService.HintSize="467.2,117.6" sap2010:WorkflowViewState.IdRef="TakeScreenshot_1" Screenshot="[Screenshot]">
+    <ui:TakeScreenshot WaitBefore="{x:Null}" sap2010:Annotation.AnnotationText="The whole screen is captured." DisplayName="02 Take screenshot" sap:VirtualizedContainerService.HintSize="467.2,117.6" sap2010:WorkflowViewState.IdRef="TakeScreenshot_1" Screenshot="[Screenshot]">
       <ui:TakeScreenshot.Target>
         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="cdfbed4b-33c9-4bc0-85c3-c68ed4238b19" WaitForReady="INTERACTIVE">
           <ui:Target.TimeoutMS>

@@ -8,7 +8,9 @@
     "UiPath.GSuite.Activities": "[2.1.2]",
     "UiPath.System.Activities": "[23.4.2]",
     "UiPath.Testing.Activities": "[23.4.0]",
-    "UiPath.UIAutomation.Activities": "[23.4.4]"
+    "UiPath.Twilio.IntegrationService.Activities": "[5.0.9]",
+    "UiPath.UIAutomation.Activities": "[23.4.4]",
+    "UiPath.WebAPI.Activities": "[1.18.0]"
   },
   "webServices": [],
   "entitiesStores": [],
@@ -16,6 +18,7 @@
   "studioVersion": "23.4.1.0",
   "projectVersion": "1.0.0",
   "runtimeOptions": {
+    "exceptionHandlerWorkflow": "GlobalHandler.xaml",
     "autoDispose": false,
     "netFrameworkLazyLoading": false,
     "isPausable": true,
@@ -44,7 +47,8 @@
       "ignoredFiles": []
     },
     "fileInfoCollection": [],
-    "modernBehavior": true
+    "modernBehavior": true,
+    "saveToCloud": false
   },
   "expressionLanguage": "VisualBasic",
   "entryPoints": [
