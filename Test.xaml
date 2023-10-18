@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Test" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1114.4,602.4" sap2010:WorkflowViewState.IdRef="Test_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uibi="http://schemas.uipath.com/workflow/infrastructure/baf/uibi" xmlns:uiisi="http://schemas.uipath.com/workflow/infrastructure/is/uiisi" xmlns:utia="clr-namespace:UiPath.Twilio.IntegrationService.Activities;assembly=UiPath.Twilio.IntegrationService.Activities" xmlns:utic="clr-namespace:UiPath.Twilio.IntegrationService.Client;assembly=UiPath.Twilio.IntegrationService" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Test" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="562.4,1560" sap2010:WorkflowViewState.IdRef="Test_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>GlobalConstantsNamespace</x:String>
@@ -116,126 +116,76 @@
       <AssemblyReference>UiPath.Twilio.IntegrationService.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Web</AssemblyReference>
       <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Linq.Async.Queryable</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Linq.Parallel</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Linq.Queryable</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Test" sap:VirtualizedContainerService.HintSize="449.6,501.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Test" sap:VirtualizedContainerService.HintSize="572.8,1495.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
-      <Variable x:TypeArguments="x:String" Default="AC7e5ef063c923f8a499cb430a402be38a" Name="strAccountSID" />
-      <Variable x:TypeArguments="x:String" Default="a5609e98058697d5779d01dc8d09bcea" Name="strToken" />
-      <Variable x:TypeArguments="x:String" Default="+17127170067" Name="strMobileNo" />
+      <Variable x:TypeArguments="x:String" Name="strLName" />
+      <Variable x:TypeArguments="x:String" Name="strFullName" />
+      <Variable x:TypeArguments="x:String" Name="strFName" />
+      <Variable x:TypeArguments="x:String" Name="strAssignVal" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message (Test 01)" sap:VirtualizedContainerService.HintSize="387.2,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Test Flow&quot;]" />
-    <utia:SendMessage ActivityInstanceId="279f183a-9940-4c2a-9dbb-127d7b7cfbd8" BindingsVersion="2.1" BusinessEntityName="Messages" ConfiguredBusinessEntity="Messages" ConnectionId="7f26e548-7596-41f8-9554-3d1541b5daa3" Connector="uipath-twilio-messaging" CrudOperation="Create" DesignConnectionEnabled="True" DisplayName="01 Send Message" sap:VirtualizedContainerService.HintSize="387.2,256.8" sap2010:WorkflowViewState.IdRef="SendMessage_1">
-      <utia:SendMessage.BusinessEntity>
-        <uibi:BusinessEntity Name="Messages">
-          <uibi:BusinessEntity.AllFields>
-            <scg:List x:TypeArguments="uibi:EntityField" Capacity="6">
-              <uiisi:OperationEntityField x:TypeArguments="x:String" Description="{x:Null}" ArgumentDirection="Out" ArgumentType="x:String" DataType="String" DisplayName="Sid" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="True" IsIdField="True" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="Response.Sid" ShouldFilterOnChange="False" />
-              <uiisi:OperationEntityField x:TypeArguments="utic:Messages" ArgumentDirection="In" ArgumentType="utic:Messages" DataType="Messages" Description="The message to be sent to the receiver" DisplayName="Body" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="True" IsIdField="False" IsMandatory="True" IsParameter="True" IsPriority="False" IsSelected="False" Location="Undefined" Name="body" ShouldFilterOnChange="False" />
-              <uiisi:OperationEntityField x:TypeArguments="utic:Messages" x:Name="__ReferenceID4" ArgumentDirection="Out" ArgumentType="utic:Messages" DataType="Messages" Description="The Messages object returned." DisplayName="Response" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="Response" ShouldFilterOnChange="False">
-                <uiisi:OperationEntityField.Metadata>
-                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsPermanentlyHidden">False</x:Boolean>
-                  </scg:Dictionary>
-                </uiisi:OperationEntityField.Metadata>
-              </uiisi:OperationEntityField>
-              <uiisi:OperationEntityField x:TypeArguments="x:String" x:Name="__ReferenceID1" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="The receiver’s phone number" DisplayName="To" FormDataType="ExpressionTextBox" InArgumentValue="+94777566889" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="False" IsMandatory="True" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.to" Order="1" ShouldFilterOnChange="False">
-                <uiisi:OperationEntityField.ArgumentValue>
-                  <InArgument x:TypeArguments="x:String">+94777566889</InArgument>
-                </uiisi:OperationEntityField.ArgumentValue>
-                <uiisi:OperationEntityField.Metadata>
-                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <uiisi:CustomFieldsPriority x:Key="CustomFieldsPriority">Default</uiisi:CustomFieldsPriority>
-                  </scg:Dictionary>
-                </uiisi:OperationEntityField.Metadata>
-                <uiisi:OperationEntityField.Value>
-                  <Literal x:TypeArguments="x:String">+94777566889</Literal>
-                </uiisi:OperationEntityField.Value>
-              </uiisi:OperationEntityField>
-              <uiisi:OperationEntityField x:TypeArguments="x:String" x:Name="__ReferenceID2" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="The sender’s phone number that is registered with Twilio" DisplayName="From" FormDataType="ExpressionTextBox" InArgumentValue="+17127170067" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="False" IsMandatory="True" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.from" Order="1" ShouldFilterOnChange="False">
-                <uiisi:OperationEntityField.ArgumentValue>
-                  <InArgument x:TypeArguments="x:String">+17127170067</InArgument>
-                </uiisi:OperationEntityField.ArgumentValue>
-                <uiisi:OperationEntityField.Metadata>
-                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <uiisi:CustomFieldsPriority x:Key="CustomFieldsPriority">Default</uiisi:CustomFieldsPriority>
-                  </scg:Dictionary>
-                </uiisi:OperationEntityField.Metadata>
-                <uiisi:OperationEntityField.Value>
-                  <Literal x:TypeArguments="x:String">+17127170067</Literal>
-                </uiisi:OperationEntityField.Value>
-              </uiisi:OperationEntityField>
-              <uiisi:OperationEntityField x:TypeArguments="x:String" x:Name="__ReferenceID3" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="The message to be sent to the receiver" DisplayName="Body" FormDataType="ExpressionTextBox" InArgumentValue="Hi,&#xA;Konica Minolta Procecss has been completed.&#xA;&#xA;Thank you!" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="False" IsMandatory="True" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.body" Order="1" ShouldFilterOnChange="False">
-                <uiisi:OperationEntityField.ArgumentValue>
-                  <InArgument x:TypeArguments="x:String" xml:space="preserve">Hi,
-Konica Minolta Procecss has been completed.
-
-Thank you!</InArgument>
-                </uiisi:OperationEntityField.ArgumentValue>
-                <uiisi:OperationEntityField.Metadata>
-                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <uiisi:CustomFieldsPriority x:Key="CustomFieldsPriority">Default</uiisi:CustomFieldsPriority>
-                  </scg:Dictionary>
-                </uiisi:OperationEntityField.Metadata>
-                <uiisi:OperationEntityField.Value>
-                  <Literal x:TypeArguments="x:String" xml:space="preserve">Hi,
-Konica Minolta Procecss has been completed.
-
-Thank you!</Literal>
-                </uiisi:OperationEntityField.Value>
-              </uiisi:OperationEntityField>
-            </scg:List>
-          </uibi:BusinessEntity.AllFields>
-          <uibi:BusinessEntity.EntityMetadata>
-            <uibi:EntityMetadata Metadata="{x:Reference __ReferenceID0}" DisplayName="Messages" EligibleOperations="1" IsCustomEntity="False" Name="Messages" />
-          </uibi:BusinessEntity.EntityMetadata>
-          <uibi:BusinessEntity.Metadata>
-            <scg:Dictionary x:TypeArguments="x:String, x:Object" x:Name="__ReferenceID0">
-              <x:String x:Key="Object">Messages</x:String>
-              <x:String x:Key="Client">UiPath.Twilio.IntegrationService.Client.MessagesAPIClient</x:String>
-              <x:String x:Key="Operation">CreateMessage</x:String>
-              <x:String x:Key="Path">/Messages</x:String>
+    <ui:LogMessage DisplayName="Log Message (Test 01)" sap:VirtualizedContainerService.HintSize="510.4,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Test Flow&quot;]" />
+    <Assign sap:VirtualizedContainerService.HintSize="510.4,81.6" sap2010:WorkflowViewState.IdRef="Assign_1">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[strFullName]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">Dr. Kenneth Wenz</InArgument>
+      </Assign.Value>
+    </Assign>
+    <If Condition="[strFullName.Contains(&quot;Dr&quot;) or strFullName.Contains(&quot;Mr&quot;)]" sap:VirtualizedContainerService.HintSize="510.4,487.2" sap2010:WorkflowViewState.IdRef="If_1">
+      <If.Then>
+        <Sequence sap:VirtualizedContainerService.HintSize="476.8,304" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
-          </uibi:BusinessEntity.Metadata>
-          <uibi:BusinessEntity.SelectedFields>
-            <scg:List x:TypeArguments="uibi:EntityField" Capacity="4">
-              <x:Reference>__ReferenceID1</x:Reference>
-              <x:Reference>__ReferenceID2</x:Reference>
-              <x:Reference>__ReferenceID3</x:Reference>
-              <x:Reference>__ReferenceID4</x:Reference>
-            </scg:List>
-          </uibi:BusinessEntity.SelectedFields>
-          <uibi:BusinessEntity.TelemetryProperties>
-            <scg:Dictionary x:TypeArguments="uibi:TelemetryGroup, scg:IDictionary(x:String, x:String)" />
-          </uibi:BusinessEntity.TelemetryProperties>
-        </uibi:BusinessEntity>
-      </utia:SendMessage.BusinessEntity>
-      <utia:SendMessage.CachedLookupValues>
-        <scg:Dictionary x:TypeArguments="x:String, scg:List(uiisi:LookupValue)" />
-      </utia:SendMessage.CachedLookupValues>
-      <utia:SendMessage.DesignConnectionRequest>
-        <uiisi:ConnectionParameters AuthType="ElementInstance" ConnectionId="7f26e548-7596-41f8-9554-3d1541b5daa3" ConnectionName="2023-09-28T18:54:16.464" ConnectorKey="uipath-twilio-messaging">
-          <uiisi:ConnectionParameters.TelemetryInfo>
-            <uiisi:TelemetryInfo ActivityPack="UiPath.Twilio.IntegrationService.Activities" ActivityPackVersion="5.0.9" Source="StudioDesktop" />
-          </uiisi:ConnectionParameters.TelemetryInfo>
-        </uiisi:ConnectionParameters>
-      </utia:SendMessage.DesignConnectionRequest>
-      <utia:SendMessage.SelectedFields>
-        <scg:List x:TypeArguments="uibi:EntityField" Capacity="4">
-          <x:Reference>__ReferenceID1</x:Reference>
-          <x:Reference>__ReferenceID2</x:Reference>
-          <x:Reference>__ReferenceID3</x:Reference>
-          <x:Reference>__ReferenceID4</x:Reference>
-        </scg:List>
-      </utia:SendMessage.SelectedFields>
-      <utia:SendMessage.TelemetryProperties>
-        <scg:Dictionary x:TypeArguments="uibi:TelemetryGroup, scg:IDictionary(x:String, x:String)" />
-      </utia:SendMessage.TelemetryProperties>
-    </utia:SendMessage>
+          </sap:WorkflowViewStateService.ViewState>
+          <Assign sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_2">
+            <Assign.To>
+              <OutArgument x:TypeArguments="x:String">[strAssignVal]</OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="x:String">[strFullName.Replace("Dr.","").ToString]</InArgument>
+            </Assign.Value>
+          </Assign>
+          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="433.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[strAssignVal]" />
+        </Sequence>
+      </If.Then>
+      <If.Else>
+        <Sequence sap2010:WorkflowViewState.IdRef="Sequence_3" />
+      </If.Else>
+    </If>
+    <Assign sap:VirtualizedContainerService.HintSize="510.4,81.6" sap2010:WorkflowViewState.IdRef="Assign_3">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[strFName]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">[strAssignVal.Split(" "C)(1).TrimStart]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <Assign sap:VirtualizedContainerService.HintSize="510.4,81.6" sap2010:WorkflowViewState.IdRef="Assign_4">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[strLName]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">[strAssignVal.Split(" "C)(2).ToString]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="510.4,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_5" Message="[strFName  +&quot; | &quot;+strLName]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="510.4,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[strAssignVal.Split(&quot; &quot;C)(2).Trim]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="510.4,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[strAssignVal.Split(&quot; &quot;C)(1).Trim]" />
   </Sequence>
 </Activity>
