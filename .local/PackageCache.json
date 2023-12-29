@@ -71,6 +71,92 @@
     },
     {
       "Package": {
+        "Id": "UiPath.Mail.Activities",
+        "Version": "1.21.1"
+      },
+      "Assemblies": [
+        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\azure.core\\1.18.0\\lib/net5.0/Azure.Core.dll",
+        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\google.apis\\1.55.0\\lib/netstandard2.0/Google.Apis.dll",
+        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\google.apis.auth\\1.55.0\\lib/netstandard2.0/Google.Apis.Auth.PlatformServices.dll",
+        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\google.apis.auth\\1.55.0\\lib/netstandard2.0/Google.Apis.Auth.dll",
+        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\google.apis.calendar.v3\\1.55.0.2554\\lib/netstandard2.0/Google.Apis.Calendar.v3.dll",
+        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\google.apis.core\\1.55.0\\lib/netstandard2.0/Google.Apis.Core.dll",
+        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\google.apis.gmail.v1\\1.55.0.2510\\lib/netstandard2.0/Google.Apis.Gmail.v1.dll",
+        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\google.apis.peopleservice.v1\\1.55.0.2567\\lib/netstandard2.0/Google.Apis.PeopleService.v1.dll",
+        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\htmlagilitypack\\1.11.38\\lib/netstandard2.0/HtmlAgilityPack.dll",
+        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\mailkit\\3.1.1\\lib/net6.0/MailKit.dll",
+        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll",
+        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\microsoft.extensions.filesystemglobbing\\5.0.0\\lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.dll",
+        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\microsoft.graph\\4.11.0\\lib/netstandard2.0/Microsoft.Graph.dll",
+        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\microsoft.graph.core\\2.0.5\\lib/netstandard2.0/Microsoft.Graph.Core.dll",
+        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\microsoft.identity.client\\4.35.1\\lib/netcoreapp2.1/Microsoft.Identity.Client.dll",
+        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\6.12.2\\lib/netstandard2.0/Microsoft.IdentityModel.JsonWebTokens.dll",
+        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\microsoft.identitymodel.logging\\6.12.2\\lib/netstandard2.0/Microsoft.IdentityModel.Logging.dll",
+        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\microsoft.identitymodel.protocols\\6.12.2\\lib/netstandard2.0/Microsoft.IdentityModel.Protocols.dll",
+        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\microsoft.identitymodel.protocols.openidconnect\\6.12.2\\lib/netstandard2.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll",
+        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\microsoft.identitymodel.tokens\\6.12.2\\lib/netstandard2.0/Microsoft.IdentityModel.Tokens.dll",
+        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\mimekit\\3.1.1\\lib/net6.0/MimeKit.dll",
+        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\newtonsoft.json\\13.0.1\\lib/netstandard2.0/Newtonsoft.Json.dll",
+        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\portable.bouncycastle\\1.9.0\\lib/netstandard2.0/BouncyCastle.Crypto.dll",
+        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\system.identitymodel.tokens.jwt\\6.12.2\\lib/netstandard2.0/System.IdentityModel.Tokens.Jwt.dll",
+        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\system.io.abstractions\\3.0.10\\lib/netstandard2.0/System.IO.Abstractions.dll",
+        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\system.memory.data\\1.0.2\\lib/netstandard2.0/System.Memory.Data.dll",
+        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\system.runtime.caching\\5.0.0\\runtimes/win/lib/netstandard2.0/System.Runtime.Caching.dll",
+        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\uipath.activities.runtimegovernance\\1.1.6\\lib/net5.0-windows7.0/UiPath.Activities.RuntimeGovernance.dll",
+        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\uipath.connectionclient\\1.4.6\\lib/net5.0/ConnectionClient.dll",
+        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\uipath.mail.activities\\1.21.1\\lib/net6.0-windows7.0/Interop.Domino.UiPath.dll",
+        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\uipath.mail.activities\\1.21.1\\lib/net6.0-windows7.0/Microsoft.Exchange.WebServices.dll",
+        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\uipath.mail.activities\\1.21.1\\lib/net6.0-windows7.0/Microsoft.Office.Interop.Outlook.dll",
+        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\uipath.mail.activities\\1.21.1\\lib/net6.0-windows7.0/Microsoft.Office.Interop.Word.dll",
+        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\uipath.mail.activities\\1.21.1\\lib/net6.0-windows7.0/Office.dll",
+        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\uipath.mail.activities\\1.21.1\\lib/net6.0-windows7.0/UiPath.Mail.Activities.Design.dll",
+        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\uipath.mail.activities\\1.21.1\\lib/net6.0-windows7.0/UiPath.Mail.Activities.dll",
+        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\uipath.mail.activities\\1.21.1\\lib/net6.0-windows7.0/UiPath.Mail.dll",
+        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\uipath.mail.activities\\1.21.1\\lib/net6.0-windows7.0/UiPath.MainSessionServer.Shared.dll",
+        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\uipath.platform\\23.4.1\\lib/net6.0-windows7.0/UiPath.Platform.dll",
+        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\uipath.telemetry.client\\1.5.3\\lib/netstandard2.0/TelemetryClient.dll"
+      ],
+      "Path": "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\uipath.mail.activities\\1.21.1"
+    },
+    {
+      "Package": {
+        "Id": "UiPath.MicrosoftOffice365.Activities",
+        "Version": "2.3.3"
+      },
+      "Assemblies": [
+        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\azure.core\\1.18.0\\lib/net5.0/Azure.Core.dll",
+        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\closedxml\\0.95.4\\lib/netstandard2.0/ClosedXML.dll",
+        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\documentformat.openxml\\2.12.1\\lib/netstandard2.0/DocumentFormat.OpenXml.dll",
+        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\excelnumberformat\\1.0.10\\lib/netstandard2.0/ExcelNumberFormat.dll",
+        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll",
+        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\microsoft.graph\\4.11.0\\lib/netstandard2.0/Microsoft.Graph.dll",
+        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\microsoft.graph.core\\2.0.5\\lib/netstandard2.0/Microsoft.Graph.Core.dll",
+        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\microsoft.identity.client\\4.35.1\\lib/netcoreapp2.1/Microsoft.Identity.Client.dll",
+        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\6.12.2\\lib/netstandard2.0/Microsoft.IdentityModel.JsonWebTokens.dll",
+        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\microsoft.identitymodel.logging\\6.12.2\\lib/netstandard2.0/Microsoft.IdentityModel.Logging.dll",
+        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\microsoft.identitymodel.protocols\\6.12.2\\lib/netstandard2.0/Microsoft.IdentityModel.Protocols.dll",
+        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\microsoft.identitymodel.protocols.openidconnect\\6.12.2\\lib/netstandard2.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll",
+        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\microsoft.identitymodel.tokens\\6.12.2\\lib/netstandard2.0/Microsoft.IdentityModel.Tokens.dll",
+        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\newtonsoft.json\\13.0.1\\lib/netstandard2.0/Newtonsoft.Json.dll",
+        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\system.activities.viewmodels\\1.0.0-20230713.1\\lib/net5.0-windows7.0/System.Activities.ViewModels.dll",
+        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\system.identitymodel.tokens.jwt\\6.12.2\\lib/netstandard2.0/System.IdentityModel.Tokens.Jwt.dll",
+        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\system.io.abstractions\\3.0.10\\lib/netstandard2.0/System.IO.Abstractions.dll",
+        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\system.linq.async\\6.0.1\\lib/net6.0/System.Linq.Async.dll",
+        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\system.linq.async.queryable\\6.0.1\\lib/net6.0/System.Linq.Async.Queryable.dll",
+        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\system.memory.data\\1.0.2\\lib/netstandard2.0/System.Memory.Data.dll",
+        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\system.runtime.caching\\5.0.0\\runtimes/win/lib/netstandard2.0/System.Runtime.Caching.dll",
+        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\uipath.activities.runtimegovernance\\1.1.6\\lib/net5.0-windows7.0/UiPath.Activities.RuntimeGovernance.dll",
+        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\uipath.connectionclient\\1.4.6\\lib/net5.0/ConnectionClient.dll",
+        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\uipath.microsoftoffice365.activities\\2.3.3\\lib/net6.0-windows7.0/UiPath.MicrosoftOffice365.Activities.Design.dll",
+        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\uipath.microsoftoffice365.activities\\2.3.3\\lib/net6.0-windows7.0/UiPath.MicrosoftOffice365.Activities.dll",
+        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\uipath.microsoftoffice365.activities\\2.3.3\\lib/net6.0-windows7.0/UiPath.MicrosoftOffice365.dll",
+        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\uipath.platform\\23.4.1\\lib/net6.0-windows7.0/UiPath.Platform.dll",
+        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\uipath.telemetry.client\\1.5.3\\lib/netstandard2.0/TelemetryClient.dll"
+      ],
+      "Path": "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\uipath.microsoftoffice365.activities\\2.3.3"
+    },
+    {
+      "Package": {
         "Id": "UiPath.System.Activities",
         "Version": "23.4.2"
       },
@@ -236,89 +322,16 @@
     },
     {
       "Package": {
-        "Id": "UiPath.MicrosoftOffice365.Activities",
-        "Version": "2.3.3"
+        "Id": "UiPath.Amazon.Textract.Activities",
+        "Version": "4.0.1"
       },
       "Assemblies": [
-        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\azure.core\\1.18.0\\lib/net5.0/Azure.Core.dll",
-        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\closedxml\\0.95.4\\lib/netstandard2.0/ClosedXML.dll",
-        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\documentformat.openxml\\2.12.1\\lib/netstandard2.0/DocumentFormat.OpenXml.dll",
-        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\excelnumberformat\\1.0.10\\lib/netstandard2.0/ExcelNumberFormat.dll",
-        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll",
-        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\microsoft.graph\\4.11.0\\lib/netstandard2.0/Microsoft.Graph.dll",
-        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\microsoft.graph.core\\2.0.5\\lib/netstandard2.0/Microsoft.Graph.Core.dll",
-        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\microsoft.identity.client\\4.35.1\\lib/netcoreapp2.1/Microsoft.Identity.Client.dll",
-        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\6.12.2\\lib/netstandard2.0/Microsoft.IdentityModel.JsonWebTokens.dll",
-        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\microsoft.identitymodel.logging\\6.12.2\\lib/netstandard2.0/Microsoft.IdentityModel.Logging.dll",
-        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\microsoft.identitymodel.protocols\\6.12.2\\lib/netstandard2.0/Microsoft.IdentityModel.Protocols.dll",
-        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\microsoft.identitymodel.protocols.openidconnect\\6.12.2\\lib/netstandard2.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll",
-        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\microsoft.identitymodel.tokens\\6.12.2\\lib/netstandard2.0/Microsoft.IdentityModel.Tokens.dll",
-        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\newtonsoft.json\\13.0.1\\lib/netstandard2.0/Newtonsoft.Json.dll",
-        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\system.activities.viewmodels\\1.0.0-20230713.1\\lib/net5.0-windows7.0/System.Activities.ViewModels.dll",
-        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\system.identitymodel.tokens.jwt\\6.12.2\\lib/netstandard2.0/System.IdentityModel.Tokens.Jwt.dll",
-        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\system.io.abstractions\\3.0.10\\lib/netstandard2.0/System.IO.Abstractions.dll",
-        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\system.linq.async\\6.0.1\\lib/net6.0/System.Linq.Async.dll",
-        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\system.linq.async.queryable\\6.0.1\\lib/net6.0/System.Linq.Async.Queryable.dll",
-        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\system.memory.data\\1.0.2\\lib/netstandard2.0/System.Memory.Data.dll",
-        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\system.runtime.caching\\5.0.0\\runtimes/win/lib/netstandard2.0/System.Runtime.Caching.dll",
-        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\uipath.activities.runtimegovernance\\1.1.6\\lib/net5.0-windows7.0/UiPath.Activities.RuntimeGovernance.dll",
-        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\uipath.connectionclient\\1.4.6\\lib/net5.0/ConnectionClient.dll",
-        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\uipath.microsoftoffice365.activities\\2.3.3\\lib/net6.0-windows7.0/UiPath.MicrosoftOffice365.Activities.Design.dll",
-        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\uipath.microsoftoffice365.activities\\2.3.3\\lib/net6.0-windows7.0/UiPath.MicrosoftOffice365.Activities.dll",
-        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\uipath.microsoftoffice365.activities\\2.3.3\\lib/net6.0-windows7.0/UiPath.MicrosoftOffice365.dll",
-        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\uipath.platform\\23.4.1\\lib/net6.0-windows7.0/UiPath.Platform.dll",
-        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\uipath.telemetry.client\\1.5.3\\lib/netstandard2.0/TelemetryClient.dll"
+        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\genericparsing\\1.2.2\\lib/netstandard2.0/GenericParsing.dll",
+        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\uipath.amazon.textract.activities\\4.0.1\\lib/net6.0-windows7.0/UiPath.Amazon.Textract.Activities.Design.dll",
+        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\uipath.amazon.textract.activities\\4.0.1\\lib/net6.0-windows7.0/UiPath.Amazon.Textract.Activities.dll",
+        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\uipath.amazon.textract.activities\\4.0.1\\lib/net6.0-windows7.0/UiPath.Amazon.Textract.Client.dll"
       ],
-      "Path": "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\uipath.microsoftoffice365.activities\\2.3.3"
-    },
-    {
-      "Package": {
-        "Id": "UiPath.Mail.Activities",
-        "Version": "1.21.1"
-      },
-      "Assemblies": [
-        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\azure.core\\1.18.0\\lib/net5.0/Azure.Core.dll",
-        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\google.apis\\1.55.0\\lib/netstandard2.0/Google.Apis.dll",
-        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\google.apis.auth\\1.55.0\\lib/netstandard2.0/Google.Apis.Auth.PlatformServices.dll",
-        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\google.apis.auth\\1.55.0\\lib/netstandard2.0/Google.Apis.Auth.dll",
-        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\google.apis.calendar.v3\\1.55.0.2554\\lib/netstandard2.0/Google.Apis.Calendar.v3.dll",
-        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\google.apis.core\\1.55.0\\lib/netstandard2.0/Google.Apis.Core.dll",
-        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\google.apis.gmail.v1\\1.55.0.2510\\lib/netstandard2.0/Google.Apis.Gmail.v1.dll",
-        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\google.apis.peopleservice.v1\\1.55.0.2567\\lib/netstandard2.0/Google.Apis.PeopleService.v1.dll",
-        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\htmlagilitypack\\1.11.38\\lib/netstandard2.0/HtmlAgilityPack.dll",
-        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\mailkit\\3.1.1\\lib/net6.0/MailKit.dll",
-        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll",
-        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\microsoft.extensions.filesystemglobbing\\5.0.0\\lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.dll",
-        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\microsoft.graph\\4.11.0\\lib/netstandard2.0/Microsoft.Graph.dll",
-        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\microsoft.graph.core\\2.0.5\\lib/netstandard2.0/Microsoft.Graph.Core.dll",
-        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\microsoft.identity.client\\4.35.1\\lib/netcoreapp2.1/Microsoft.Identity.Client.dll",
-        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\6.12.2\\lib/netstandard2.0/Microsoft.IdentityModel.JsonWebTokens.dll",
-        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\microsoft.identitymodel.logging\\6.12.2\\lib/netstandard2.0/Microsoft.IdentityModel.Logging.dll",
-        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\microsoft.identitymodel.protocols\\6.12.2\\lib/netstandard2.0/Microsoft.IdentityModel.Protocols.dll",
-        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\microsoft.identitymodel.protocols.openidconnect\\6.12.2\\lib/netstandard2.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll",
-        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\microsoft.identitymodel.tokens\\6.12.2\\lib/netstandard2.0/Microsoft.IdentityModel.Tokens.dll",
-        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\mimekit\\3.1.1\\lib/net6.0/MimeKit.dll",
-        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\newtonsoft.json\\13.0.1\\lib/netstandard2.0/Newtonsoft.Json.dll",
-        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\portable.bouncycastle\\1.9.0\\lib/netstandard2.0/BouncyCastle.Crypto.dll",
-        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\system.identitymodel.tokens.jwt\\6.12.2\\lib/netstandard2.0/System.IdentityModel.Tokens.Jwt.dll",
-        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\system.io.abstractions\\3.0.10\\lib/netstandard2.0/System.IO.Abstractions.dll",
-        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\system.memory.data\\1.0.2\\lib/netstandard2.0/System.Memory.Data.dll",
-        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\system.runtime.caching\\5.0.0\\runtimes/win/lib/netstandard2.0/System.Runtime.Caching.dll",
-        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\uipath.activities.runtimegovernance\\1.1.6\\lib/net5.0-windows7.0/UiPath.Activities.RuntimeGovernance.dll",
-        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\uipath.connectionclient\\1.4.6\\lib/net5.0/ConnectionClient.dll",
-        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\uipath.mail.activities\\1.21.1\\lib/net6.0-windows7.0/Interop.Domino.UiPath.dll",
-        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\uipath.mail.activities\\1.21.1\\lib/net6.0-windows7.0/Microsoft.Exchange.WebServices.dll",
-        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\uipath.mail.activities\\1.21.1\\lib/net6.0-windows7.0/Microsoft.Office.Interop.Outlook.dll",
-        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\uipath.mail.activities\\1.21.1\\lib/net6.0-windows7.0/Microsoft.Office.Interop.Word.dll",
-        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\uipath.mail.activities\\1.21.1\\lib/net6.0-windows7.0/Office.dll",
-        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\uipath.mail.activities\\1.21.1\\lib/net6.0-windows7.0/UiPath.Mail.Activities.Design.dll",
-        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\uipath.mail.activities\\1.21.1\\lib/net6.0-windows7.0/UiPath.Mail.Activities.dll",
-        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\uipath.mail.activities\\1.21.1\\lib/net6.0-windows7.0/UiPath.Mail.dll",
-        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\uipath.mail.activities\\1.21.1\\lib/net6.0-windows7.0/UiPath.MainSessionServer.Shared.dll",
-        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\uipath.platform\\23.4.1\\lib/net6.0-windows7.0/UiPath.Platform.dll",
-        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\uipath.telemetry.client\\1.5.3\\lib/netstandard2.0/TelemetryClient.dll"
-      ],
-      "Path": "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\uipath.mail.activities\\1.21.1"
+      "Path": "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\uipath.amazon.textract.activities\\4.0.1"
     }
   ],
   "Conflicts": [],
@@ -429,6 +442,11 @@
     "ExcelNumberFormat": {
       "Id": "ExcelNumberFormat",
       "Version": "1.0.10",
+      "Dependencies": []
+    },
+    "GenericParsing": {
+      "Id": "GenericParsing",
+      "Version": "1.2.2",
       "Dependencies": []
     },
     "Google.Apis": {
@@ -4386,6 +4404,16 @@
         }
       ]
     },
+    "UiPath.Amazon.Textract.Activities": {
+      "Id": "UiPath.Amazon.Textract.Activities",
+      "Version": "4.0.1",
+      "Dependencies": [
+        {
+          "Item1": "GenericParsing",
+          "Item2": "[1.2.2, )"
+        }
+      ]
+    },
     "UiPath.CodedWorkflows": {
       "Id": "UiPath.CodedWorkflows",
       "Version": "23.2.0-alpha.3503132",
@@ -5134,6 +5162,16 @@
         "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\excelnumberformat\\1.0.10\\lib\\netstandard2.0\\ExcelNumberFormat.dll"
       ],
       "Path": "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\excelnumberformat\\1.0.10"
+    },
+    {
+      "Package": {
+        "Id": "GenericParsing",
+        "Version": "1.2.2"
+      },
+      "Assemblies": [
+        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\genericparsing\\1.2.2\\lib\\netstandard2.0\\GenericParsing.dll"
+      ],
+      "Path": "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\genericparsing\\1.2.2"
     },
     {
       "Package": {
@@ -7616,6 +7654,18 @@
         "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\uipath.activities.runtimegovernance\\1.1.6\\lib\\net5.0-windows7.0\\UiPath.Activities.RuntimeGovernance.dll"
       ],
       "Path": "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\uipath.activities.runtimegovernance\\1.1.6"
+    },
+    {
+      "Package": {
+        "Id": "UiPath.Amazon.Textract.Activities",
+        "Version": "4.0.1"
+      },
+      "Assemblies": [
+        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\uipath.amazon.textract.activities\\4.0.1\\lib\\net6.0-windows7.0\\UiPath.Amazon.Textract.Activities.Design.dll",
+        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\uipath.amazon.textract.activities\\4.0.1\\lib\\net6.0-windows7.0\\UiPath.Amazon.Textract.Activities.dll",
+        "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\uipath.amazon.textract.activities\\4.0.1\\lib\\net6.0-windows7.0\\UiPath.Amazon.Textract.Client.dll"
+      ],
+      "Path": "C:\\Users\\Dinuka Thilakarathne\\.nuget\\packages\\uipath.amazon.textract.activities\\4.0.1"
     },
     {
       "Package": {

@@ -123,6 +123,19 @@
           }
         }
       },
+      "GenericParsing/1.2.2": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/_._": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/GenericParsing.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Google.Apis/1.55.0": {
         "type": "package",
         "dependencies": {
@@ -4201,6 +4214,23 @@
           "lib/net5.0-windows7.0/UiPath.Activities.RuntimeGovernance.dll": {}
         }
       },
+      "UiPath.Amazon.Textract.Activities/4.0.1": {
+        "type": "package",
+        "dependencies": {
+          "GenericParsing": "1.2.2"
+        },
+        "compile": {
+          "lib/net6.0-windows7.0/_._": {}
+        },
+        "runtime": {
+          "lib/net6.0-windows7.0/UiPath.Amazon.Textract.Activities.Design.dll": {},
+          "lib/net6.0-windows7.0/UiPath.Amazon.Textract.Activities.dll": {},
+          "lib/net6.0-windows7.0/UiPath.Amazon.Textract.Client.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WPF"
+        ]
+      },
       "UiPath.CodedWorkflows/23.2.0-alpha.3503132": {
         "type": "package",
         "dependencies": {
@@ -5994,6 +6024,19 @@
         },
         "runtime": {
           "lib/netstandard2.0/ExcelNumberFormat.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "GenericParsing/1.2.2": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/_._": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/GenericParsing.dll": {
             "related": ".xml"
           }
         }
@@ -9932,6 +9975,23 @@
           "lib/net5.0-windows7.0/UiPath.Activities.RuntimeGovernance.dll": {}
         }
       },
+      "UiPath.Amazon.Textract.Activities/4.0.1": {
+        "type": "package",
+        "dependencies": {
+          "GenericParsing": "1.2.2"
+        },
+        "compile": {
+          "lib/net6.0-windows7.0/_._": {}
+        },
+        "runtime": {
+          "lib/net6.0-windows7.0/UiPath.Amazon.Textract.Activities.Design.dll": {},
+          "lib/net6.0-windows7.0/UiPath.Amazon.Textract.Activities.dll": {},
+          "lib/net6.0-windows7.0/UiPath.Amazon.Textract.Client.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WPF"
+        ]
+      },
       "UiPath.CodedWorkflows/23.2.0-alpha.3503132": {
         "type": "package",
         "dependencies": {
@@ -11748,6 +11808,23 @@
         "lib/netstandard1.0/ExcelNumberFormat.xml",
         "lib/netstandard2.0/ExcelNumberFormat.dll",
         "lib/netstandard2.0/ExcelNumberFormat.xml"
+      ]
+    },
+    "GenericParsing/1.2.2": {
+      "sha512": "w8ox/K+AJIage5zUfBRyFNt8/uBx/ushYnW/t3g2il312vD7Kxak9NZdplXcWHhTFsQR00U4TAqDLFrndnAauA==",
+      "type": "package",
+      "path": "genericparsing/1.2.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "genericparsing.1.2.2.nupkg.sha512",
+        "genericparsing.nuspec",
+        "lib/net452/GenericParsing.dll",
+        "lib/net452/GenericParsing.xml",
+        "lib/net461/GenericParsing.dll",
+        "lib/net461/GenericParsing.xml",
+        "lib/netstandard2.0/GenericParsing.dll",
+        "lib/netstandard2.0/GenericParsing.xml"
       ]
     },
     "Google.Apis/1.55.0": {
@@ -20506,6 +20583,23 @@
         "uipath.activities.runtimegovernance.nuspec"
       ]
     },
+    "UiPath.Amazon.Textract.Activities/4.0.1": {
+      "sha512": "a94OW9ZvUA5r+FfADeBlbCyzk8+f5d4ej/2EqauLO1zgR7GzpthP4aeCLPr+fO2i4x8AOfOB4/tulb9gs5cf6A==",
+      "type": "package",
+      "path": "uipath.amazon.textract.activities/4.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net461/UiPath.Amazon.Textract.Activities.Design.dll",
+        "lib/net461/UiPath.Amazon.Textract.Activities.dll",
+        "lib/net461/UiPath.Amazon.Textract.Client.dll",
+        "lib/net6.0-windows7.0/UiPath.Amazon.Textract.Activities.Design.dll",
+        "lib/net6.0-windows7.0/UiPath.Amazon.Textract.Activities.dll",
+        "lib/net6.0-windows7.0/UiPath.Amazon.Textract.Client.dll",
+        "uipath.amazon.textract.activities.4.0.1.nupkg.sha512",
+        "uipath.amazon.textract.activities.nuspec"
+      ]
+    },
     "UiPath.CodedWorkflows/23.2.0-alpha.3503132": {
       "sha512": "pP1u2j5pST91Xjo/VAZfTCrXHNIeC33xG4M4u5KeLHRvXBNRW1wvmah+YKJiclpzrpEU1ozkzFlqdRdXlbblEg==",
       "type": "package",
@@ -22639,6 +22733,7 @@
   "projectFileDependencyGroups": {
     "": [],
     "net6.0-windows7.0": [
+      "UiPath.Amazon.Textract.Activities >= 4.0.1 <= 4.0.1",
       "UiPath.Excel.Activities >= 2.20.1 <= 2.20.1",
       "UiPath.GSuite.Activities >= 2.1.2 <= 2.1.2",
       "UiPath.Mail.Activities >= 1.21.1 <= 1.21.1",
@@ -22663,6 +22758,11 @@
     "frameworks": {
       "net6.0-windows7.0": {
         "dependencies": {
+          "UiPath.Amazon.Textract.Activities": {
+            "include": "Runtime",
+            "target": "Package",
+            "version": "[4.0.1, 4.0.1]"
+          },
           "UiPath.Excel.Activities": {
             "include": "Runtime",
             "target": "Package",

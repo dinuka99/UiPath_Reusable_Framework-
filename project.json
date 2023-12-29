@@ -4,6 +4,7 @@
   "description": "Re-Usable Edited Framwork ",
   "main": "Main.xaml",
   "dependencies": {
+    "UiPath.Amazon.Textract.Activities": "[4.0.1]",
     "UiPath.Excel.Activities": "[2.20.1]",
     "UiPath.GSuite.Activities": "[2.1.2]",
     "UiPath.Mail.Activities": "[1.21.1]",
@@ -47,7 +48,6 @@
       "ignoredFiles": []
     },
     "fileInfoCollection": [],
-    "modernBehavior": true,
     "saveToCloud": false
   },
   "expressionLanguage": "VisualBasic",
