@@ -5,7 +5,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1114.4,2176.8</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1114.4,1002.4000000000001</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Test_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -153,7 +153,7 @@
       <AssemblyReference>UiPath.Amazon.Textract.Activities</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Test" sap:VirtualizedContainerService.HintSize="558.4,2112" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Test" sap:VirtualizedContainerService.HintSize="558.4,937.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="outHtmlvalue" />
       <Variable x:TypeArguments="x:String" Name="outNewVal" />
@@ -202,7 +202,7 @@
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Sequence DisplayName="config File Read email send" sap:VirtualizedContainerService.HintSize="545.6,1373.6" sap2010:WorkflowViewState.IdRef="Sequence_19">
+          <Sequence DisplayName="config File Read email send" sap:VirtualizedContainerService.HintSize="449.6,83.2" sap2010:WorkflowViewState.IdRef="Sequence_19">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -243,7 +243,7 @@
                 <InArgument x:TypeArguments="x:String">[in_Config("To_EmailList").ToString]</InArgument>
               </Assign.Value>
             </Assign>
-            <umam:SendMailConnections AttachmentList="{x:Null}" ConnectionAccountName="{x:Null}" AttachmentInputMode="Existing" Attachments="{x:Null}" AuthScopesInvalid="False" Bcc="{x:Null}" Cc="{x:Null}" ConnectionId="d57375ed-471c-48d7-a010-bf853ec31298" ContinueOnError="{x:Null}" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="483.2,512.8" sap2010:WorkflowViewState.IdRef="SendMailConnections_4" Importance="Normal" InputType="HTML" Mailbox="{x:Null}" ReplyTo="{x:Null}" SaveAsDraft="False" SingleAttachment="{x:Null}" Subject="exccel Loop Array" TextBody="{x:Null}" To="[in_Config(&quot;To_EmailList&quot;).ToString.Split(&quot;,&quot;.ToCharArray, StringSplitOptions.RemoveEmptyEntries)]" UseConnectionService="True">
+            <umam:SendMailConnections AttachmentList="{x:Null}" Attachments="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" Mailbox="{x:Null}" ReplyTo="{x:Null}" TextBody="{x:Null}" AttachmentInputMode="Existing" AuthScopesInvalid="False" ConnectionId="d57375ed-471c-48d7-a010-bf853ec31298" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="483.2,512.8" sap2010:WorkflowViewState.IdRef="SendMailConnections_4" Importance="Normal" InputType="HTML" SaveAsDraft="False" Subject="exccel Loop Array" To="[in_Config(&quot;To_EmailList&quot;).ToString.Split(&quot;,&quot;.ToCharArray, StringSplitOptions.RemoveEmptyEntries)]" UseConnectionService="True">
               <umam:SendMailConnections.AttachmentsBackup>
                 <usau:BackupSlot x:TypeArguments="umame:AttachmentInputMode" StoredValue="Existing">
                   <usau:BackupSlot.BackupValues>
@@ -267,18 +267,18 @@
       </ui:CommentOut.Body>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:CommentOut>
-    <Sequence DisplayName="Read Emails from the NotePad " sap:VirtualizedContainerService.HintSize="496,1257.6" sap2010:WorkflowViewState.IdRef="Sequence_13">
+    <Sequence DisplayName="Read Emails from the NotePad " sap:VirtualizedContainerService.HintSize="496,83.2" sap2010:WorkflowViewState.IdRef="Sequence_13">
       <Sequence.Variables>
         <Variable x:TypeArguments="scg:IEnumerable(x:String)" Default="[{&quot;dweerasinghe@innobothealth.com&quot;}]" Name="ccEmail" />
       </Sequence.Variables>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
